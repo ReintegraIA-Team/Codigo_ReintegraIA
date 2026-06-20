@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Configuración - ReintegraIA</title>
+    <link rel="stylesheet" href="he_cab_configuracion.css" />
+  </head>
+
+  <body>
+    <nav class="top-header">
+      <a href="index.html" class="logo">
+        <img src="imagenes/logo_reintegraia.jpg" alt="Logo de ReintegraIA" />
+      </a>
+
+      <ul class="menu-horizontal">
+        <li>
+          <a href="index.html">Inicio</a>
+          <ul class="menu-vertical">
+            <li><a href="index.html">Panel principal</a></li>
+            <li><a href="#">Calendario de sesiones</a></li>
+            <li><a href="#">Alertas recientes</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Internos</a>
+          <ul class="menu-vertical">
+            <li><a href="#">Lista de internos</a></li>
+            <li><a href="#">Registrar interno</a></li>
+            <li><a href="#">Perfil del interno</a></li>
+            <li><a href="#">Historial del interno</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="evaluacion.html">Evaluación</a>
+          <ul class="menu-vertical">
+            <li><a href="evaluacion.html">Evaluación psicológica</a></li>
+            <li><a href="evaluacion.html">Evaluación social</a></li>
+            <li><a href="evaluacion.html">Diagnóstico inicial</a></li>
+            <li><a href="evaluacion.html">Plan de intervención</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="seguimiento.html">Seguimiento</a>
+          <ul class="menu-vertical">
+            <li><a href="seguimiento.html">Sesiones programadas</a></li>
+            <li><a href="#">Registrar avance</a></li>
+            <li><a href="#">Observaciones</a></li>
+            <li><a href="#">Estado del tratamiento</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Reportes</a>
+          <ul class="menu-vertical">
+            <li><a href="#">Reporte individual</a></li>
+            <li><a href="#">Reporte por especialista</a></li>
+            <li><a href="#">Reporte mensual</a></li>
+            <li><a href="#">Exportar reporte</a></li>
+          </ul>
+        </li>
+        <li class="opcion-activa">
+          <a href="configuracion.html">Configuración</a>
+          <ul class="menu-vertical menu-configuracion">
+            <li><a href="configuracion.html">Mi perfil</a></li>
+            <li><a href="configuracion.html">Especialistas</a></li>
+            <li><a href="configuracion.html">Roles y permisos</a></li>
+            <li><a href="#">Cerrar sesión</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="div-busqueda">
+        <input type="text" placeholder="Buscar" />
+        <button type="button">Psi.</button>
+      </div>
+    </nav>
+
+    <section class="section-configuracion">
+      <div class="div-menu-configuracion">
+        <h2>Configuración</h2>
+        <a href="" class="seleccionado">Usuarios y roles</a>
+        <a href="">Parámetros</a>
+        <a href="">Catálogos</a>
+        <a href="">Notificaciones</a>
+        <a href="">Auditoría</a>
+      </div>
+
+      <div class="div-usuarios-roles">
+        <h2>Usuarios y roles</h2>
+
+        <div class="usuarios-activos">
+          <h3>Usuarios activos</h3>
+          <table>
+            <tbody>
+              <tr><td>Juan Perez</td><td>Evaluación AI</td><td>Psicología</td><td>Activo</td></tr>
+              <tr><td>Rodolfo Rojas</td><td>Evaluación AI</td><td>Psicología</td><td>Activo</td></tr>
+              <tr><td>Emilia Perez</td><td>Evaluación AI</td><td>Psicología</td><td>Inactivo</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="titulo-permisos">Matriz de permisos</h3>
+        <div class="matriz-permisos">
+          <p>Ver internos</p>
+          <p>Editar evaluaciones</p>
+          <p>Generar reportes</p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
