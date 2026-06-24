@@ -11,3 +11,14 @@ evidencias/edge-profile-*/
 
 # Dependency folders
 node_modules/
+
+# Legacy root prototype files kept locally but not published
+/configuracion.html
+/evaluacion.html
+/index.html
+/seguimiento.html
+/he_cab_*.css
+/script.js
+/package.json
+/imagenes/
+/features/
