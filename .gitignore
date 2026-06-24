@@ -1,0 +1,13 @@
+# System files
+Thumbs.db
+.DS_Store
+
+# Temporary browser verification profiles
+evidencias/edge-profile/
+evidencias/edge-profile-*/
+
+# Compressed backups or exports
+*.zip
+
+# Dependency folders
+node_modules/
