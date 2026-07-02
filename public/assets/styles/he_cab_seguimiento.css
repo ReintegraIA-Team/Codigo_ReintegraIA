@@ -1,0 +1,179 @@
+body {
+  margin: 0;
+  background-color: #f4f8f6;
+  color: #17201d;
+  font-family: Arial, sans-serif;
+}
+
+.top-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  width: 100%;
+  height: 85px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border-bottom: 1px solid #d6e0dc;
+}
+
+.logo { margin-left: 20px; }
+.logo img { display: block; width: 135px; height: 78px; object-fit: contain; }
+.menu-horizontal { display: flex; padding: 0; list-style: none; }
+.menu-horizontal li { position: relative; }
+
+.menu-horizontal li a {
+  display: block;
+  padding: 15px 14px;
+  color: #35413d;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.menu-horizontal li a:hover,
+.opcion-activa > a {
+  color: #075e44;
+  background-color: #ccecdf;
+  border-radius: 8px;
+}
+
+.opcion-activa > a { border-bottom: 3px solid #087553; }
+
+.menu-vertical {
+  position: absolute;
+  display: none;
+  width: 210px;
+  padding: 5px 0;
+  background-color: white;
+  border: 1px solid #d6e0dc;
+  border-radius: 8px;
+  list-style: none;
+}
+
+.menu-horizontal li:hover .menu-vertical { 
+  display: block; 
+}
+.menu-vertical li a { 
+  padding: 10px 14px; font-size: 12px; 
+}
+.menu-vertical li a:hover { 
+  background-color: #edf7f3; border-radius: 0; 
+}
+.menu-configuracion { 
+  right: 0; 
+}
+
+.div-busqueda {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-right: 28px;
+}
+
+.div-busqueda input,
+.div-busqueda button {
+  padding: 9px;
+  background-color: white;
+  border: 1px solid #d6e0dc;
+  border-radius: 8px;
+}
+
+.div-busqueda input { width: 75px; }
+.div-busqueda button { padding: 10px 15px; color: #075e44; border-radius: 20px; font-weight: bold; }
+
+/* CONTENIDO DE SEGUIMIENTO */
+.section-titulo-seguimiento {
+  margin: 122px 36px 0;
+  padding: 24px;
+  background-color: white;
+  border: 1px solid #d6e0dc;
+  border-radius: 11px;
+}
+
+.section-titulo-seguimiento h2,
+.section-titulo-seguimiento p { margin: 0 0 7px; }
+.section-titulo-seguimiento p { color: #7b8984; font-size: 13px; }
+
+.section-contenido-seguimiento {
+  display: flex;
+  margin: 32px 36px;
+  gap: 30px;
+}
+
+.div-linea-tiempo,
+.calendario,
+.div-atajos {
+  background-color: white;
+  border: 1px solid #d6e0dc;
+  border-radius: 11px;
+}
+
+.div-linea-tiempo { width: 62%; min-height: 465px; padding: 24px; }
+.div-linea-tiempo h2,
+.div-calendario h2,
+.div-atajos h2 { margin-top: 0; font-size: 18px; }
+
+.sesion {
+  display: flex;
+  margin-top: 40px;
+  align-items: center;
+  gap: 10px;
+}
+
+.sesion strong { width: 38px; color: #3d4b46; }
+.circulo { width: 18px; height: 18px; background-color: #ccecdf; border-radius: 50%; }
+.circulo-verde { background-color: #087553; }
+
+.sesion p {
+  margin: 0;
+  padding: 16px 13px;
+  flex: 1;
+  color: #3d4b46;
+  background-color: #f4f8f6;
+  border: 1px solid #d6e0dc;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.div-columna-derecha { width: 38%; }
+.calendario { padding: 15px; }
+
+.mes-calendario {
+  display: flex;
+  padding: 7px;
+  align-items: center;
+  justify-content: space-between;
+  color: #075e44;
+  background-color: #e8f6f1;
+  border-radius: 8px;
+}
+
+.mes-calendario button {
+  color: #075e44;
+  background-color: white;
+  border: 1px solid #d6e0dc;
+  border-radius: 50%;
+}
+
+.calendario table { width: 100%; margin-top: 7px; border-collapse: collapse; text-align: center; font-size: 11px; }
+.calendario th, .calendario td { padding: 6px 3px; }
+.calendario th { color: #075e44; font-size: 9px; }
+.dia-seleccionado { color: white; background-color: #075e44; border-radius: 4px; }
+.otro-mes { color: #b8c1bd; }
+
+.div-atajos { position: relative; margin-top: 20px; padding: 24px; }
+
+.div-atajos a {
+  display: block;
+  margin-top: 14px;
+  padding: 13px 16px;
+  color: #43504b;
+  background-color: #f4f8f6;
+  border: 1px solid #d6e0dc;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.imagen-atajos { position: absolute; top: -24px; right: -5px; width: 100px; height: 80px; object-fit: contain; }

@@ -1,0 +1,251 @@
+body {
+  margin: 0;
+  background-color: #f4f8f6;
+  color: #17201d;
+  font-family: Arial, sans-serif;
+}
+
+/* CABECERA Y MENUS */
+.top-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  width: 100%;
+  height: 85px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border-bottom: 1px solid #d6e0dc;
+}
+
+.logo {
+  margin-left: 20px;
+}
+
+.logo img {
+  display: block;
+  width: 135px;
+  height: 78px;
+  object-fit: contain;
+}
+
+.menu-horizontal {
+  display: flex;
+  padding: 0;
+  list-style: none;
+}
+
+.menu-horizontal li {
+  position: relative;
+}
+
+.menu-horizontal li a {
+  display: block;
+  padding: 15px 14px;
+  color: #35413d;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.menu-horizontal li a:hover,
+.opcion-inicio > a {
+  color: #075e44;
+  background-color: #ccecdf;
+  border-radius: 8px;
+}
+
+.menu-vertical {
+  position: absolute;
+  display: none;
+  width: 210px;
+  padding: 5px 0;
+  background-color: white;
+  border: 1px solid #d6e0dc;
+  border-radius: 8px;
+  list-style: none;
+}
+
+.menu-horizontal li:hover .menu-vertical {
+  display: block;
+}
+
+.menu-vertical li a {
+  padding: 10px 14px;
+  font-size: 12px;
+}
+
+.menu-vertical li a:hover {
+  background-color: #edf7f3;
+  border-radius: 0;
+}
+
+.menu-configuracion {
+  right: 0;
+}
+
+.div-busqueda {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-right: 28px;
+}
+
+.div-busqueda input,
+.div-busqueda button {
+  padding: 9px;
+  background-color: white;
+  border: 1px solid #d6e0dc;
+  border-radius: 8px;
+}
+
+.div-busqueda input {
+  width: 75px;
+}
+
+.div-busqueda button {
+  padding: 10px 15px;
+  color: #075e44;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+/* CONTENIDO DE INICIO */
+.section-resumen,
+.section-seguimiento {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.section-resumen {
+  margin-top: 115px;
+}
+
+.section-seguimiento {
+  margin-top: 28px;
+}
+
+.div-gral-resumen,
+.div-gral-seguimiento {
+  display: flex;
+  gap: 20px;
+}
+
+.tarjeta-resumen,
+.div-tendencia,
+.div-alertas,
+.div-gral-actividad {
+  background-color: white;
+  border: 1px solid #d6e0dc;
+  border-radius: 11px;
+}
+
+.tarjeta-resumen {
+  display: flex;
+  width: 25%;
+  min-height: 105px;
+  padding: 15px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.texto-tarjeta p,
+.texto-tarjeta h2 {
+  margin: 0 0 7px;
+}
+
+.texto-tarjeta p {
+  color: #77827e;
+  font-size: 13px;
+}
+
+.texto-tarjeta h2 {
+  font-size: 27px;
+}
+
+.texto-tarjeta small {
+  color: #087553;
+  font-weight: bold;
+}
+
+.texto-tarjeta .texto-rojo {
+  color: #d83b32;
+}
+
+.imagen-tarjeta {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+}
+
+.div-tendencia,
+.div-alertas {
+  padding: 22px;
+}
+
+.div-tendencia { width: 60%; }
+.div-alertas { width: 40%; }
+
+.div-tendencia h2,
+.div-alertas h2,
+.div-gral-actividad h2 {
+  margin-top: 0;
+  font-size: 17px;
+}
+
+.div-grafico {
+  display: flex;
+  height: 150px;
+  padding: 0 40px;
+  align-items: flex-end;
+  justify-content: space-between;
+  background-color: #f4f8f6;
+  border: 1px solid #d6e0dc;
+  border-radius: 8px;
+}
+
+.barra { width: 32px; border-radius: 6px 6px 0 0; }
+.barra-verde { background-color: #27906c; }
+.barra-clara { background-color: #ccecdf; }
+.barra-baja { height: 42px; }
+.barra-media { height: 68px; }
+.barra-alta { height: 90px; }
+.barra-grande { height: 115px; }
+
+.div-alertas p {
+  padding: 12px 15px;
+  background-color: #f4f8f6;
+  border: 1px solid #d6e0dc;
+  border-radius: 8px;
+}
+
+.div-alertas .documento-vencido {
+  color: #d83b32;
+  background-color: #fff0ec;
+}
+
+.section-actividad {
+  margin: 30px;
+}
+
+.div-gral-actividad {
+  padding: 22px;
+}
+
+.tabla-actividad {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.tabla-actividad th,
+.tabla-actividad td {
+  padding: 9px 13px;
+  text-align: left;
+  border-bottom: 1px solid #d6e0dc;
+}
+
+.tabla-actividad th {
+  background-color: #f1f5f3;
+}

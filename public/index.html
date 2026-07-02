@@ -3,213 +3,198 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="ReintegraIA centraliza evaluaciones, seguimiento y alertas para apoyar procesos de reinsercion social."
-    />
-    <title>ReintegraIA | Seguimiento inteligente para reinsercion</title>
-    <link rel="icon" href="favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/styles/styles.css" />
+    <title>ReintegraIA</title>
+    <link rel="stylesheet" href="assets/styles/he_cab_menu.css" />
   </head>
 
   <body>
-    <header class="site-header">
-      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+    <!-- CABECERA Y MENU PRINCIPAL -->
+    <nav class="top-header">
+      <a href="index.html" class="logo">
         <img src="assets/images/logo_reintegraia.jpg" alt="Logo de ReintegraIA" />
       </a>
 
-      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <ul class="menu-horizontal">
+        <li class="opcion-inicio">
+          <a href="index.html">Inicio</a>
+          <ul class="menu-vertical">
+            <li><a href="">Panel principal</a></li>
+            <li><a href="">Calendario de sesiones</a></li>
+            <li><a href="">Alertas recientes</a></li>
+          </ul>
+        </li>
 
-      <nav class="main-nav" aria-label="Navegacion principal">
-        <a href="#solucion">Solucion</a>
-        <a href="#modulos">Modulos</a>
-        <a href="#impacto">Impacto</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-    </header>
+        <li>
+          <a href="#">Internos</a>
+          <ul class="menu-vertical">
+            <li><a href="">Lista de internos</a></li>
+            <li><a href="">Registrar interno</a></li>
+            <li><a href="">Perfil del interno</a></li>
+            <li><a href="">Historial del interno</a></li>
+          </ul>
+        </li>
 
-    <main>
-      <section class="hero" id="inicio">
-        <div class="hero-content">
-          <p class="eyebrow">Plataforma de evaluacion y seguimiento</p>
-          <h1>ReintegraIA</h1>
-          <p class="hero-text">
-            Centraliza informacion clave, prioriza riesgos y acompaña las decisiones de especialistas
-            que trabajan en procesos de rehabilitacion y reinsercion social.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#contacto">Solicitar informacion</a>
-            <a class="button button-secondary" href="#modulos">Ver modulos</a>
+        <li>
+          <a href="evaluacion.html">Evaluación</a>
+          <ul class="menu-vertical">
+            <li><a href="evaluacion.html">Evaluación psicológica</a></li>
+            <li><a href="evaluacion.html">Evaluación social</a></li>
+            <li><a href="evaluacion.html">Diagnóstico inicial</a></li>
+            <li><a href="evaluacion.html">Plan de intervención</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="seguimiento.html">Seguimiento</a>
+          <ul class="menu-vertical">
+            <li><a href="seguimiento.html">Sesiones programadas</a></li>
+            <li><a href="">Registrar avance</a></li>
+            <li><a href="">Observaciones</a></li>
+            <li><a href="">Estado del tratamiento</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">Reportes</a>
+          <ul class="menu-vertical">
+            <li><a href="">Reporte individual</a></li>
+            <li><a href="">Reporte por especialista</a></li>
+            <li><a href="">Reporte mensual</a></li>
+            <li><a href="">Exportar reporte</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="configuracion.html">Configuración</a>
+          <ul class="menu-vertical menu-configuracion">
+            <li><a href="configuracion.html">Mi perfil</a></li>
+            <li><a href="configuracion.html">Especialistas</a></li>
+            <li><a href="configuracion.html">Roles y permisos</a></li>
+            <li><a href="#">Cerrar sesión</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="div-busqueda">
+        <input type="text" placeholder="Buscar" />
+        <button type="button">Psi.</button>
+      </div>
+    </nav>
+
+    <!-- TARJETAS DE RESUMEN -->
+    <section class="section-resumen">
+      <div class="div-gral-resumen">
+        <div class="tarjeta-resumen">
+          <div class="texto-tarjeta">
+            <p>Internos</p>
+            <h2>1,284</h2>
+            <small>Actualizado hoy</small>
+          </div>
+          <img src="assets/images/internos.png" alt="Icono de internos" class="imagen-tarjeta" />
+        </div>
+
+        <div class="tarjeta-resumen">
+          <div class="texto-tarjeta">
+            <p>Evaluaciones</p>
+            <h2>342</h2>
+            <small>Actualizado hoy</small>
+          </div>
+          <img src="assets/images/evaluaciones.png" alt="Icono de evaluaciones" class="imagen-tarjeta" />
+        </div>
+
+        <div class="tarjeta-resumen">
+          <div class="texto-tarjeta">
+            <p>Alertas</p>
+            <h2>27</h2>
+            <small class="texto-rojo">Prioridad alta</small>
+          </div>
+          <img src="assets/images/alertas.png" alt="Icono de alertas" class="imagen-tarjeta" />
+        </div>
+
+        <div class="tarjeta-resumen">
+          <div class="texto-tarjeta">
+            <p>Reportes</p>
+            <h2>96</h2>
+            <small>Actualizado hoy</small>
+          </div>
+          <img src="assets/images/reportes.png" alt="Icono de reportes" class="imagen-tarjeta" />
+        </div>
+      </div>
+    </section>
+
+    <!-- GRAFICO Y ALERTAS -->
+    <section class="section-seguimiento">
+      <div class="div-gral-seguimiento">
+        <div class="div-tendencia">
+          <h2>Tendencia de reinserción</h2>
+          <div class="div-grafico">
+            <div class="barra barra-clara barra-baja"></div>
+            <div class="barra barra-verde barra-media"></div>
+            <div class="barra barra-clara barra-alta"></div>
+            <div class="barra barra-verde barra-grande"></div>
+            <div class="barra barra-clara barra-baja"></div>
+            <div class="barra barra-verde barra-media"></div>
+            <div class="barra barra-clara barra-alta"></div>
           </div>
         </div>
 
-        <aside class="dashboard-preview" aria-label="Vista previa del tablero">
-          <div class="preview-header">
-            <span>Panel de seguimiento</span>
-            <strong>Hoy</strong>
-          </div>
-          <div class="metric-grid">
-            <article>
-              <img src="assets/images/internos.png" alt="" />
-              <span>Internos</span>
-              <strong>1,284</strong>
-            </article>
-            <article>
-              <img src="assets/images/evaluaciones.png" alt="" />
-              <span>Evaluaciones</span>
-              <strong>342</strong>
-            </article>
-            <article>
-              <img src="assets/images/alertas.png" alt="" />
-              <span>Alertas</span>
-              <strong>27</strong>
-            </article>
-            <article>
-              <img src="assets/images/reportes.png" alt="" />
-              <span>Reportes</span>
-              <strong>96</strong>
-            </article>
-          </div>
-          <div class="progress-panel">
-            <div>
-              <span>Tendencia de reinsercion</span>
-              <strong>74%</strong>
-            </div>
-            <div class="bars" aria-hidden="true">
-              <span style="height: 42%"></span>
-              <span style="height: 68%"></span>
-              <span style="height: 52%"></span>
-              <span style="height: 84%"></span>
-              <span style="height: 63%"></span>
-              <span style="height: 76%"></span>
-            </div>
-          </div>
-        </aside>
-      </section>
-
-      <section class="section" id="solucion">
-        <div class="section-heading">
-          <p class="eyebrow">Solucion digital</p>
-          <h2>Informacion organizada para intervenir a tiempo</h2>
-          <p>
-            ReintegraIA permite que equipos multidisciplinarios registren evaluaciones,
-            consulten avances y detecten casos que requieren atencion prioritaria.
-          </p>
+        <div class="div-alertas">
+          <h2>Alertas de seguimiento</h2>
+          <p>Evaluación pendiente</p>
+          <p>Sesión psicológica hoy</p>
+          <p class="documento-vencido">Documento vencido</p>
         </div>
+      </div>
+    </section>
 
-        <div class="feature-row">
-          <article class="feature-card">
-            <span class="feature-icon">01</span>
-            <h3>Evaluacion integral</h3>
-            <p>Ordena diagnosticos psicologicos y sociales en un mismo flujo de trabajo.</p>
-          </article>
-          <article class="feature-card">
-            <span class="feature-icon">02</span>
-            <h3>Seguimiento continuo</h3>
-            <p>Visualiza sesiones, observaciones y estados de tratamiento por cada interno.</p>
-          </article>
-          <article class="feature-card">
-            <span class="feature-icon">03</span>
-            <h3>Alertas tempranas</h3>
-            <p>Prioriza pendientes y riesgos para reducir retrasos en la atencion.</p>
-          </article>
-        </div>
-      </section>
+    <!-- TABLA DE ACTIVIDAD -->
+    <section class="section-actividad">
+      <div class="div-gral-actividad">
+        <h2>Actividad reciente</h2>
 
-      <section class="section split-section" id="modulos">
-        <div>
-          <p class="eyebrow">Modulos principales</p>
-          <h2>Una vista clara para cada etapa del proceso</h2>
-          <p>
-            El avance contempla modulos conectados para internos, evaluaciones, seguimiento,
-            alertas, calendario y reportes institucionales.
-          </p>
-        </div>
-
-        <div class="module-list">
-          <article>
-            <img src="assets/images/calendario.png" alt="" />
-            <div>
-              <h3>Calendario de sesiones</h3>
-              <p>Planificacion de actividades, entrevistas y controles programados.</p>
-            </div>
-          </article>
-          <article>
-            <img src="assets/images/alertas.png" alt="" />
-            <div>
-              <h3>Gestion de alertas</h3>
-              <p>Semaforizacion de casos pendientes, vencidos o de prioridad alta.</p>
-            </div>
-          </article>
-          <article>
-            <img src="assets/images/reportes.png" alt="" />
-            <div>
-              <h3>Reportes de avance</h3>
-              <p>Indicadores preparados para revision por especialistas y coordinadores.</p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="impact-band" id="impacto">
-        <div>
-          <span>+1,200</span>
-          <p>Perfiles centralizados</p>
-        </div>
-        <div>
-          <span>24/7</span>
-          <p>Seguimiento de alertas</p>
-        </div>
-        <div>
-          <span>4</span>
-          <p>Areas conectadas</p>
-        </div>
-      </section>
-
-      <section class="section contact-section" id="contacto">
-        <div>
-          <p class="eyebrow">Contacto</p>
-          <h2>Conversemos sobre el piloto</h2>
-          <p>
-            Este formulario forma parte del avance de landing page y simula el registro de interes
-            de una institucion o especialista.
-          </p>
-        </div>
-
-        <form class="contact-form" id="contactForm">
-          <label>
-            Nombre
-            <input type="text" name="name" placeholder="Nombre completo" required />
-          </label>
-          <label>
-            Correo
-            <input type="email" name="email" placeholder="correo@institucion.pe" required />
-          </label>
-          <label>
-            Mensaje
-            <textarea name="message" rows="4" placeholder="Cuéntanos que necesitas" required></textarea>
-          </label>
-          <button class="button button-primary" type="submit">Enviar mensaje</button>
-          <p class="form-feedback" role="status" aria-live="polite"></p>
-        </form>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <p>ReintegraIA - Avance de landing page</p>
-      <a href="#inicio">Volver arriba</a>
-    </footer>
-
-    <script src="assets/scripts/main.js"></script>
+        <table class="tabla-actividad">
+          <thead>
+            <tr>
+              <th>Interno</th>
+              <th>Tipo de evaluación</th>
+              <th>Área</th>
+              <th>Estado</th>
+              <th>Riesgo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Acuña Torres, Luis Miguel</td>
+              <td>Evaluación AI</td>
+              <td>Psicología</td>
+              <td>Activo</td>
+              <td>Riesgo medio</td>
+            </tr>
+            <tr>
+              <td>Benítez Rojas, Carlos Alberto</td>
+              <td>Evaluación AI</td>
+              <td>Psicología</td>
+              <td>Activo</td>
+              <td>Riesgo bajo</td>
+            </tr>
+            <tr>
+              <td>Castillo Flores, Diego Andrés</td>
+              <td>Evaluación AI</td>
+              <td>Psicología</td>
+              <td>Activo</td>
+              <td>Riesgo bajo</td>
+            </tr>
+            <tr>
+              <td>Chávez Medina, José Daniel</td>
+              <td>Evaluación AI</td>
+              <td>Psicología</td>
+              <td>Activo</td>
+              <td>Riesgo medio</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
   </body>
 </html>
+

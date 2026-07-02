@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seguimiento - ReintegraIA</title>
+    <link rel="stylesheet" href="assets/styles/he_cab_seguimiento.css" />
+  </head>
+
+  <body>
+    <!-- CABECERA Y MENU PRINCIPAL -->
+    <nav class="top-header">
+      <a href="index.html" class="logo">
+        <img src="assets/images/logo_reintegraia.jpg" alt="Logo de ReintegraIA" />
+      </a>
+
+      <ul class="menu-horizontal">
+        <li>
+          <a href="index.html">Inicio</a>
+          <ul class="menu-vertical">
+            <li><a href="index.html">Panel principal</a></li>
+            <li><a href="#">Calendario de sesiones</a></li>
+            <li><a href="#">Alertas recientes</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">Internos</a>
+          <ul class="menu-vertical">
+            <li><a href="#">Lista de internos</a></li>
+            <li><a href="#">Registrar interno</a></li>
+            <li><a href="#">Perfil del interno</a></li>
+            <li><a href="#">Historial del interno</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="evaluacion.html">Evaluación</a>
+          <ul class="menu-vertical">
+            <li><a href="evaluacion.html">Evaluación psicológica</a></li>
+            <li><a href="evaluacion.html">Evaluación social</a></li>
+            <li><a href="evaluacion.html">Diagnóstico inicial</a></li>
+            <li><a href="evaluacion.html">Plan de intervención</a></li>
+          </ul>
+        </li>
+
+        <li class="opcion-activa">
+          <a href="seguimiento.html">Seguimiento</a>
+          <ul class="menu-vertical">
+            <li><a href="seguimiento.html">Sesiones programadas</a></li>
+            <li><a href="#">Registrar avance</a></li>
+            <li><a href="#">Observaciones</a></li>
+            <li><a href="#">Estado del tratamiento</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">Reportes</a>
+          <ul class="menu-vertical">
+            <li><a href="#">Reporte individual</a></li>
+            <li><a href="#">Reporte por especialista</a></li>
+            <li><a href="#">Reporte mensual</a></li>
+            <li><a href="#">Exportar reporte</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="configuracion.html">Configuración</a>
+          <ul class="menu-vertical menu-configuracion">
+            <li><a href="configuracion.html">Mi perfil</a></li>
+            <li><a href="configuracion.html">Especialistas</a></li>
+            <li><a href="configuracion.html">Roles y permisos</a></li>
+            <li><a href="#">Cerrar sesión</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="div-busqueda">
+        <input type="text" placeholder="Buscar" />
+        <button type="button">Psi.</button>
+      </div>
+    </nav>
+
+    <!-- TITULO DE LA PAGINA -->
+    <section class="section-titulo-seguimiento">
+      <h2>Seguimiento de pacientes internos</h2>
+      <p>Control de sesiones, metas y alertas por especialista.</p>
+    </section>
+
+    <!-- CONTENIDO DE SEGUIMIENTO -->
+    <section class="section-contenido-seguimiento">
+      <div class="div-linea-tiempo">
+        <h2>Línea de tiempo</h2>
+
+        <div class="sesion">
+          <strong>13:00</strong>
+          <span class="circulo circulo-verde"></span>
+          <p>Sesión psicológica con interno Acuña Torres, Luis Miguel</p>
+        </div>
+
+        <div class="sesion">
+          <strong>14:00</strong>
+          <span class="circulo"></span>
+          <p>Revisión de documentos</p>
+        </div>
+
+        <div class="sesion">
+          <strong>14:30</strong>
+          <span class="circulo"></span>
+          <p>Meta educativa</p>
+        </div>
+
+        <div class="sesion">
+          <strong>16:00</strong>
+          <span class="circulo"></span>
+          <p>Segunda sesión psicológica con el interno Benítez Rojas, Carlos Alberto</p>
+        </div>
+      </div>
+
+      <div class="div-columna-derecha">
+        <div class="div-calendario">
+          <h2>Calendario</h2>
+
+          <div class="calendario">
+            <div class="mes-calendario">
+              <button type="button">&lt;</button>
+              <strong>Junio 2026</strong>
+              <button type="button">&gt;</button>
+            </div>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Lun</th><th>Mar</th><th>Mié</th><th>Jue</th>
+                  <th>Vie</th><th>Sáb</th><th>Dom</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr>
+                <tr><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td></tr>
+                <tr><td>15</td><td>16</td><td>17</td><td class="dia-seleccionado">18</td><td>19</td><td>20</td><td>21</td></tr>
+                <tr><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td></tr>
+                <tr><td>29</td><td>30</td><td class="otro-mes">1</td><td class="otro-mes">2</td><td class="otro-mes">3</td><td class="otro-mes">4</td><td class="otro-mes">5</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="div-atajos">
+          <h2>Atajos</h2>
+          <img src="assets/images/calendario.png" alt="Icono de calendario" class="imagen-atajos" />
+          <a href="#">Actualizar ficha</a>
+          <a href="#">Programar entrevista</a>
+          <a href="#">Validar avance</a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+

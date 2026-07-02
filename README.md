@@ -1,8 +1,14 @@
-# ReintegraIA Landing Page
+# ReintegraIA
 
 ReintegraIA es una propuesta digital orientada a apoyar los procesos de evaluacion, seguimiento y reinsercion de personas internas mediante herramientas de registro, monitoreo y analisis asistido por inteligencia artificial.
 
-Este repositorio contiene el avance de implementacion de la landing page del proyecto, desarrollado con HTML, CSS y JavaScript puro, siguiendo la estructura solicitada para el curso.
+Este repositorio contiene el avance de implementacion web del proyecto, desarrollado con HTML, CSS y JavaScript puro, siguiendo la estructura solicitada para el curso.
+
+## Sitio publicado
+
+Landing page publicada con GitHub Pages:
+
+https://reintegraia-team.github.io/Codigo_ReintegraIA/
 
 ## Autores
 
@@ -26,11 +32,21 @@ Este repositorio contiene el avance de implementacion de la landing page del pro
 - Dashboard con indicadores de avance, reportes y actividades recientes.
 - Soporte para decisiones mediante analisis asistido por IA.
 
+## Pantallas implementadas
+
+- `public/index.html`: panel principal con indicadores, alertas y actividad reciente.
+- `public/evaluacion.html`: formulario de evaluacion integral y criterios de evaluacion.
+- `public/seguimiento.html`: seguimiento de pacientes internos, linea de tiempo, calendario y atajos.
+- `public/configuracion.html`: configuracion, usuarios, roles y matriz de permisos.
+
 ## Estructura del proyecto
 
 ```text
 public/
   index.html
+  evaluacion.html
+  seguimiento.html
+  configuracion.html
   favicon.ico
   assets/
     images/
@@ -38,6 +54,10 @@ public/
       main.js
     styles/
       styles.css
+      he_cab_menu.css
+      he_cab_evaluacion.css
+      he_cab_seguimiento.css
+      he_cab_configuracion.css
 README.md
 ```
 
@@ -60,7 +80,8 @@ El proyecto se publico en GitHub y se organizo con GitFlow:
 ## Estado del avance
 
 - Estructura de carpetas solicitada: completada.
-- Landing page inicial: completada.
+- Avance de pantallas web: completado.
 - Assets organizados: completado.
 - README inicial: completado.
-- Publicacion y organizacion en GitHub: pendiente de ejecutar con acceso a Git/GitHub.
+- Publicacion en GitHub Pages: completada.
+- Repositorio ubicado en la organizacion ReintegraIA-Team: completado.
