@@ -1,38 +1,12 @@
-const navToggle = document.querySelector(".nav-toggle");
-const mainNav = document.querySelector(".main-nav");
-const navLinks = document.querySelectorAll(".main-nav a");
-const contactForm = document.querySelector("#contactForm");
-const feedback = document.querySelector(".form-feedback");
+// Archivo base JavaScript del prototipo ReintegraIA.
+// Las pantallas actuales son estaticas y no requieren logica adicional.
 
-navToggle?.addEventListener("click", () => {
-  const isOpen = mainNav.classList.toggle("is-open");
-  navToggle.setAttribute("aria-expanded", String(isOpen));
-});
+document.addEventListener("DOMContentLoaded", () => {
+  const searchInput = document.querySelector(".div-busqueda input");
 
-navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    mainNav.classList.remove("is-open");
-    navToggle?.setAttribute("aria-expanded", "false");
-  });
-});
-
-const sections = [...document.querySelectorAll("main section[id]")];
-
-const updateActiveLink = () => {
-  const current = sections
-    .filter((section) => section.getBoundingClientRect().top <= 120)
-    .pop();
-
-  navLinks.forEach((link) => {
-    link.classList.toggle("is-active", current && link.hash === `#${current.id}`);
-  });
-};
-
-window.addEventListener("scroll", updateActiveLink, { passive: true });
-updateActiveLink();
-
-contactForm?.addEventListener("submit", (event) => {
-  event.preventDefault();
-  contactForm.reset();
-  feedback.textContent = "Mensaje registrado para la demo del landing page.";
+  if (searchInput) {
+    searchInput.addEventListener("input", () => {
+      searchInput.setAttribute("aria-label", "Buscar en ReintegraIA");
+    });
+  }
 });
