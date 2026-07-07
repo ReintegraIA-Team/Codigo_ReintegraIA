@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Evaluación - ReintegraIA</title>
     <link rel="stylesheet" href="assets/styles/he_cab_evaluacion.css" />
+    <link rel="stylesheet" href="assets/styles/he_cab_mejoras.css" />
   </head>
 
   <body>
     <nav class="top-header">
       <a href="index.html" class="logo">
-        <img src="assets/images/logo_reintegraia.jpg" alt="Logo de ReintegraIA" />
+        <img src="assets/images/logo_reintegraia-sinFondo.png" alt="Logo de ReintegraIA" />
       </a>
 
       <ul class="menu-horizontal">
@@ -18,114 +19,203 @@
           <a href="index.html">Inicio</a>
           <ul class="menu-vertical">
             <li><a href="index.html">Panel principal</a></li>
-            <li><a href="#">Calendario de sesiones</a></li>
-            <li><a href="#">Alertas recientes</a></li>
+            <li><a href="seguimiento.html#calendario-sesiones">Calendario de sesiones</a></li>
+            <li><a href="index.html#alertas-recientes">Alertas recientes</a></li>
           </ul>
         </li>
         <li>
-          <a href="#">Internos</a>
+          <a href="internos.html">Internos</a>
           <ul class="menu-vertical">
-            <li><a href="#">Lista de internos</a></li>
-            <li><a href="#">Registrar interno</a></li>
-            <li><a href="#">Perfil del interno</a></li>
-            <li><a href="#">Historial del interno</a></li>
+            <li><a href="internos.html#lista-internos">Lista de internos</a></li>
+            <li><a href="internos.html#registrar-interno">Registrar interno</a></li>
+            <li><a href="internos.html#perfil-interno">Perfil del interno</a></li>
+            <li><a href="internos.html#historial-interno">Historial del interno</a></li>
           </ul>
         </li>
         <li class="opcion-activa">
-          <a href="evaluacion.html">Evaluación</a>
+          <a href="evaluacion.html#evaluacion-psicologica">Evaluación</a>
           <ul class="menu-vertical">
-            <li><a href="evaluacion.html">Evaluación psicológica</a></li>
-            <li><a href="evaluacion.html">Evaluación social</a></li>
-            <li><a href="evaluacion.html">Diagnóstico inicial</a></li>
-            <li><a href="evaluacion.html">Plan de intervención</a></li>
+            <li><a href="evaluacion.html#evaluacion-psicologica">Evaluación psicológica</a></li>
+            <li><a href="evaluacion.html#evaluacion-social">Evaluación social</a></li>
+            <li><a href="evaluacion.html#diagnostico-inicial">Diagnóstico inicial</a></li>
+            <li><a href="evaluacion.html#plan-intervencion">Plan de intervención</a></li>
           </ul>
         </li>
         <li>
           <a href="seguimiento.html">Seguimiento</a>
           <ul class="menu-vertical">
-            <li><a href="seguimiento.html">Sesiones programadas</a></li>
-            <li><a href="#">Registrar avance</a></li>
-            <li><a href="#">Observaciones</a></li>
-            <li><a href="#">Estado del tratamiento</a></li>
+            <li><a href="seguimiento.html#sesiones-programadas">Sesiones programadas</a></li>
+            <li><a href="seguimiento.html#registrar-avance">Registrar avance</a></li>
+            <li><a href="seguimiento.html#observaciones">Observaciones</a></li>
+            <li><a href="seguimiento.html#estado-tratamiento">Estado del tratamiento</a></li>
           </ul>
         </li>
         <li>
-          <a href="#">Reportes</a>
+          <a href="reportes.html">Reportes</a>
           <ul class="menu-vertical">
-            <li><a href="#">Reporte individual</a></li>
-            <li><a href="#">Reporte por especialista</a></li>
-            <li><a href="#">Reporte mensual</a></li>
-            <li><a href="#">Exportar reporte</a></li>
+            <li><a href="reportes.html#reporte-individual">Reporte individual</a></li>
+            <li><a href="reportes.html#reporte-especialista">Reporte por especialista</a></li>
+            <li><a href="reportes.html#reporte-mensual">Reporte mensual</a></li>
+            <li><a href="reportes.html#exportar-reporte">Exportar reporte</a></li>
           </ul>
         </li>
         <li>
           <a href="configuracion.html">Configuración</a>
           <ul class="menu-vertical menu-configuracion">
-            <li><a href="configuracion.html">Mi perfil</a></li>
-            <li><a href="configuracion.html">Especialistas</a></li>
-            <li><a href="configuracion.html">Roles y permisos</a></li>
-            <li><a href="#">Cerrar sesión</a></li>
+            <li><a href="configuracion.html#mi-perfil">Mi perfil</a></li>
+            <li><a href="configuracion.html#especialistas">Especialistas</a></li>
+            <li><a href="configuracion.html#roles-permisos">Roles y permisos</a></li>
+            <li><a href="login.html#cerrar-sesion">Cerrar sesión</a></li>
           </ul>
         </li>
       </ul>
 
-      <div class="div-busqueda">
-        <input type="text" placeholder="Buscar" />
-        <button type="button">Psi.</button>
+            <div class="div-busqueda">
+        <details class="menu-usuario">
+          <summary>Psi.</summary>
+          <div class="opciones-usuario">
+            <button type="button">Ver perfil</button>
+            <button type="button">Cerrar sesión</button>
+          </div>
+        </details>
       </div>
     </nav>
 
-    <section class="section-evaluacion">
+    <section id="evaluacion-psicologica" class="section-evaluacion">
       <div class="div-formulario-evaluacion">
         <h2>Evaluación integral</h2>
 
         <form>
           <div class="fila-campos">
             <div class="campo">
-              <label for="area">Área</label>
-              <input type="text" id="area" placeholder="Completar*" />
+              <label for="interno">Interno</label>
+              <input type="text" id="interno" value="Acuña Torres, Luis Miguel - INT-02481" />
             </div>
+            <div class="campo">
+              <label for="area">Área</label>
+              <input type="text" id="area" value="Psicología clínica" />
+            </div>
+          </div>
+
+          <div class="fila-campos">
             <div class="campo">
               <label for="especialista">Especialista</label>
-              <input type="text" id="especialista" placeholder="Completar*" />
+              <input type="text" id="especialista" value="Ps. Karina Salcedo" />
             </div>
-          </div>
-
-          <div class="fila-campos">
             <div class="campo">
               <label for="fecha">Fecha</label>
-              <input type="text" id="fecha" placeholder="Completar*" />
-            </div>
-            <div class="campo">
-              <label for="tipo">Tipo</label>
-              <input type="text" id="tipo" placeholder="Completar*" />
+              <input type="text" id="fecha" value="07/07/2026" />
             </div>
           </div>
 
           <div class="fila-campos">
             <div class="campo">
-              <label for="indicadores">Indicadores</label>
-              <input type="text" id="indicadores" placeholder="Completar*" />
+              <label for="tipo">Tipo</label>
+              <input type="text" id="tipo" value="Reevaluación trimestral" />
             </div>
             <div class="campo">
-              <label for="riesgo">Nivel de riesgo</label>
-              <input type="text" id="riesgo" placeholder="Completar*" />
+              <label for="indicadores">Indicadores</label>
+              <input type="text" id="indicadores" value="Ansiedad, conducta, asistencia y apoyo familiar" />
             </div>
           </div>
 
-          <textarea placeholder="Observaciones clínicas y sociales*"></textarea>
-          <div class="resultado-riesgo">Riesgo: (Faltan datos)</div>
+          <div class="fila-campos">
+            <div class="campo">
+              <label for="riesgo">Nivel de riesgo</label>
+              <input type="text" id="riesgo" value="Medio - 62%" />
+            </div>
+            <div class="campo">
+              <label for="datos">Datos mínimos</label>
+              <input type="text" id="datos" value="7 de 10 completados" />
+            </div>
+          </div>
+
+          <textarea>Observaciones clínicas y sociales: estabilidad parcial, asistencia irregular en mayo y mejora del 18% en participación educativa durante junio.</textarea>
+          <div class="resultado-riesgo">Riesgo: Medio | Puntaje de reinserción: 62%</div>
+          <div class="fila-botones">
+            <a class="boton-accion" href="evaluacion.html#detalle-puntaje">Ver detalle del puntaje</a>
+            <a class="boton-secundario" href="seguimiento.html#registrar-avance">Registrar seguimiento</a>
+          </div>
         </form>
       </div>
 
       <div class="div-criterios">
         <h2>Criterios de evaluación</h2>
-        <p>Psicológico</p>
-        <p>Social</p>
-        <p>Conductual</p>
-        <p>Educativo</p>
+        <p>Psicológico <span class="etiqueta">62%</span></p>
+        <p id="evaluacion-social">Social <span class="etiqueta-amarilla etiqueta">58%</span></p>
+        <p>Conductual <span class="etiqueta-roja etiqueta">42%</span></p>
+        <p>Educativo <span class="etiqueta">74%</span></p>
       </div>
     </section>
+
+    <section class="seccion-ajustada grilla-dos">
+      <div id="diagnostico-inicial" class="panel-claro">
+        <h2>Diagnóstico inicial</h2>
+        <div class="lista-datos">
+          <div class="fila-dato"><span>Fecha de apertura</span><strong>12/01/2026</strong></div>
+          <div class="fila-dato"><span>Riesgo inicial</span><span class="etiqueta-roja etiqueta">Alto - 38%</span></div>
+          <div class="fila-dato"><span>Riesgo actual</span><span class="etiqueta-amarilla etiqueta">Medio - 62%</span></div>
+          <div class="fila-dato"><span>Mejora acumulada</span><strong>+24 puntos en 6 meses</strong></div>
+        </div>
+      </div>
+
+      <div id="plan-intervencion" class="panel-claro">
+        <h2>Plan de intervención</h2>
+        <div class="lista-datos">
+          <div class="fila-dato"><span>Entrevistas psicológicas</span><span class="etiqueta">4 de 5 completadas</span></div>
+          <div class="fila-dato"><span>Taller educativo</span><span class="etiqueta-amarilla etiqueta">62% de asistencia</span></div>
+          <div class="fila-dato"><span>Seguimiento familiar</span><span class="etiqueta-gris etiqueta">Próximo en 15 días</span></div>
+          <div class="barra-progreso media"><span style="width: 62%"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="datos-minimos" class="seccion-ajustada grilla-tres">
+      <div class="panel-claro">
+        <h2>Datos mínimos</h2>
+        <div class="lista-datos">
+          <div class="fila-dato"><span>Identidad y pabellón</span><span class="etiqueta">Completo</span></div>
+          <div class="fila-dato"><span>Apoyo familiar</span><span class="etiqueta-amarilla etiqueta">Pendiente</span></div>
+          <div class="fila-dato"><span>Evidencia educativa</span><span class="etiqueta-roja etiqueta">Vencida</span></div>
+        </div>
+      </div>
+
+      <div class="panel-claro">
+        <h2>Alertas clínicas</h2>
+        <div class="lista-datos">
+          <div class="fila-dato"><span>Ansiedad reportada</span><span class="etiqueta-amarilla etiqueta">2 episodios</span></div>
+          <div class="fila-dato"><span>Incidentes en 30 días</span><span class="etiqueta-roja etiqueta">1</span></div>
+          <div class="fila-dato"><span>Sesión vencida</span><span class="etiqueta-amarilla etiqueta">12 días</span></div>
+        </div>
+      </div>
+
+      <div class="panel-claro">
+        <h2>Comparación mensual</h2>
+        <div class="lista-datos">
+          <div class="fila-dato"><span>Mayo</span><span>54%</span></div>
+          <div class="fila-dato"><span>Junio</span><span>59%</span></div>
+          <div class="fila-dato"><span>Julio</span><strong>62%</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <div id="detalle-puntaje" class="modal-css">
+      <div class="modal-contenido">
+        <div class="modal-encabezado">
+          <div>
+            <span class="etiqueta-amarilla etiqueta">Puntaje IA</span>
+            <h2>Resultado de evaluación</h2>
+          </div>
+          <a class="cerrar-modal" href="evaluacion.html#evaluacion-psicologica">X</a>
+        </div>
+        <p>El puntaje de 62% combina criterios psicológicos, sociales, conductuales y educativos. La recomendación visual es mantener seguimiento quincenal durante 2 meses.</p>
+        <div class="lista-datos">
+          <div class="fila-dato"><span>Psicológico</span><strong>62%</strong></div>
+          <div class="fila-dato"><span>Social</span><strong>58%</strong></div>
+          <div class="fila-dato"><span>Conductual</span><strong>42%</strong></div>
+          <div class="fila-dato"><span>Educativo</span><strong>74%</strong></div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
-
