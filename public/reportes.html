@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reportes - ReintegraIA</title>
+    <link rel="stylesheet" href="assets/styles/he_cab_menu.css" />
+    <link rel="stylesheet" href="assets/styles/he_cab_mejoras.css" />
+  </head>
+
+  <body>
+    <nav class="top-header">
+      <a href="index.html" class="logo">
+        <img src="assets/images/logo_reintegraia-sinFondo.png" alt="Logo de ReintegraIA" />
+      </a>
+
+      <ul class="menu-horizontal">
+        <li>
+          <a href="index.html">Inicio</a>
+          <ul class="menu-vertical">
+            <li><a href="index.html">Panel principal</a></li>
+            <li><a href="seguimiento.html#calendario-sesiones">Calendario de sesiones</a></li>
+            <li><a href="index.html#alertas-recientes">Alertas recientes</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="internos.html">Internos</a>
+          <ul class="menu-vertical">
+            <li><a href="internos.html#lista-internos">Lista de internos</a></li>
+            <li><a href="internos.html#registrar-interno">Registrar interno</a></li>
+            <li><a href="internos.html#perfil-interno">Perfil del interno</a></li>
+            <li><a href="internos.html#historial-interno">Historial del interno</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="evaluacion.html">Evaluación</a>
+          <ul class="menu-vertical">
+            <li><a href="evaluacion.html#evaluacion-psicologica">Evaluación psicológica</a></li>
+            <li><a href="evaluacion.html#evaluacion-social">Evaluación social</a></li>
+            <li><a href="evaluacion.html#diagnostico-inicial">Diagnóstico inicial</a></li>
+            <li><a href="evaluacion.html#plan-intervencion">Plan de intervención</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="seguimiento.html">Seguimiento</a>
+          <ul class="menu-vertical">
+            <li><a href="seguimiento.html#sesiones-programadas">Sesiones programadas</a></li>
+            <li><a href="seguimiento.html#registrar-avance">Registrar avance</a></li>
+            <li><a href="seguimiento.html#observaciones">Observaciones</a></li>
+            <li><a href="seguimiento.html#estado-tratamiento">Estado del tratamiento</a></li>
+          </ul>
+        </li>
+        <li class="opcion-activa">
+          <a href="reportes.html#reporte-individual">Reportes</a>
+          <ul class="menu-vertical">
+            <li><a href="reportes.html#reporte-individual">Reporte individual</a></li>
+            <li><a href="reportes.html#reporte-especialista">Reporte por especialista</a></li>
+            <li><a href="reportes.html#reporte-mensual">Reporte mensual</a></li>
+            <li><a href="reportes.html#exportar-reporte">Exportar reporte</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="configuracion.html">Configuración</a>
+          <ul class="menu-vertical menu-configuracion">
+            <li><a href="configuracion.html#mi-perfil">Mi perfil</a></li>
+            <li><a href="configuracion.html#especialistas">Especialistas</a></li>
+            <li><a href="configuracion.html#roles-permisos">Roles y permisos</a></li>
+            <li><a href="login.html#cerrar-sesion">Cerrar sesión</a></li>
+          </ul>
+        </li>
+      </ul>
+
+            <div class="div-busqueda">
+        <details class="menu-usuario">
+          <summary>Psi.</summary>
+          <div class="opciones-usuario">
+            <button type="button">Ver perfil</button>
+            <button type="button">Cerrar sesión</button>
+          </div>
+        </details>
+      </div>
+    </nav>
+
+    <section class="section-resumen">
+      <div class="div-gral-resumen">
+        <div class="tarjeta-resumen">
+          <div class="texto-tarjeta">
+            <p>Reportes de julio</p>
+            <h2>96</h2>
+            <small>+14 frente a junio</small>
+          </div>
+          <img src="assets/images/reportes.png" alt="Icono de reportes" class="imagen-tarjeta" />
+        </div>
+        <div class="tarjeta-resumen">
+          <div class="texto-tarjeta">
+            <p>Individuales</p>
+            <h2>61</h2>
+            <small>8 observados</small>
+          </div>
+          <img src="assets/images/internos.png" alt="Icono de internos" class="imagen-tarjeta" />
+        </div>
+        <div class="tarjeta-resumen">
+          <div class="texto-tarjeta">
+            <p>Por especialista</p>
+            <h2>22</h2>
+            <small>88% consistencia</small>
+          </div>
+          <img src="assets/images/evaluaciones.png" alt="Icono de evaluaciones" class="imagen-tarjeta" />
+        </div>
+        <div class="tarjeta-resumen">
+          <div class="texto-tarjeta">
+            <p>Exportaciones</p>
+            <h2>37</h2>
+            <small>PDF institucional</small>
+          </div>
+          <img src="assets/images/alertas.png" alt="Icono de alertas" class="imagen-tarjeta" />
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion-ajustada grilla-dos">
+      <div id="reporte-individual" class="panel-claro">
+        <h2>Reporte individual</h2>
+        <div class="formulario-simple">
+          <div class="campo-simple">
+            <label>Interno</label>
+            <input type="text" value="Acuña Torres, Luis Miguel" />
+          </div>
+          <div class="campo-simple">
+            <label>Rango</label>
+            <input type="text" value="Abril - julio 2026" />
+          </div>
+          <div class="campo-simple">
+            <label>Secciones</label>
+            <select><option>Evaluación, historial, programas e incidentes</option><option>Resumen ejecutivo</option></select>
+          </div>
+          <div class="campo-simple">
+            <label>Estado</label>
+            <input type="text" value="Datos parciales: 2 advertencias" />
+          </div>
+        </div>
+        <div class="fila-botones">
+          <a class="boton-accion" href="reportes.html#vista-reporte">Generar vista previa</a>
+          <a class="boton-secundario" href="internos.html#evidencias-interno">Completar evidencia</a>
+        </div>
+      </div>
+
+      <div id="vista-reporte" class="panel-claro">
+        <h2>Vista previa</h2>
+        <div class="lista-datos">
+          <div class="fila-dato"><span>ID</span><strong>REI-2026-071</strong></div>
+          <div class="fila-dato"><span>Puntaje de reinserción</span><span class="etiqueta-amarilla etiqueta">62%</span></div>
+          <div class="fila-dato"><span>Incidentes del trimestre</span><span>2 eventos</span></div>
+          <div class="fila-dato"><span>Observaciones incluidas</span><span>12 registros</span></div>
+          <div class="fila-dato"><span>Advertencias</span><span class="etiqueta-amarilla etiqueta">2 pendientes</span></div>
+        </div>
+        <div id="exportar-reporte" class="fila-botones">
+          <a class="boton-accion" href="reportes.html#pdf-generado">Exportar PDF</a>
+          <a class="boton-secundario" href="configuracion.html#auditoria">Ver permisos</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion-ajustada grilla-dos">
+      <div id="reporte-especialista" class="panel-claro">
+        <h2>Reporte por especialista</h2>
+        <div class="lista-datos">
+          <div class="fila-dato"><span>Karina Salcedo</span><span class="etiqueta">42 internos</span></div>
+          <div class="fila-dato"><span>Evaluaciones completas</span><strong>31 de 42</strong></div>
+          <div class="barra-progreso"><span style="width: 74%"></span></div>
+          <div class="fila-dato"><span>Alertas abiertas</span><span class="etiqueta-amarilla etiqueta">6</span></div>
+        </div>
+      </div>
+
+      <div id="reporte-mensual" class="panel-claro">
+        <h2>Reporte mensual</h2>
+        <div class="lista-datos">
+          <div class="fila-dato"><span>Mes</span><strong>Julio 2026</strong></div>
+          <div class="fila-dato"><span>Avance promedio</span><span class="etiqueta">68%</span></div>
+          <div class="fila-dato"><span>Riesgo alto</span><span class="etiqueta-roja etiqueta">76 internos</span></div>
+          <div class="fila-dato"><span>Reportes observados</span><span class="etiqueta-amarilla etiqueta">5</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-actividad">
+      <div class="div-gral-actividad">
+        <h2>Historial de reportes</h2>
+        <table class="tabla-actividad">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Tipo</th>
+              <th>Responsable</th>
+              <th>Estado</th>
+              <th>Generado</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>REI-2026-071</td><td>Individual</td><td>Karina Salcedo</td><td><span class="etiqueta-amarilla etiqueta">En revisión</span></td><td>Hoy 09:10</td><td><a href="reportes.html#pdf-generado">PDF</a></td></tr>
+            <tr><td>REI-2026-070</td><td>Seguimiento</td><td>Rodolfo Rojas</td><td><span class="etiqueta">Aprobado</span></td><td>Hace 2 días</td><td><a href="reportes.html#pdf-generado">PDF</a></td></tr>
+            <tr><td>REI-2026-069</td><td>Riesgo</td><td>Dirección</td><td><span class="etiqueta-roja etiqueta">Observado</span></td><td>Hace 4 días</td><td><a href="evaluacion.html#datos-minimos">Revisar</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div id="pdf-generado" class="modal-css">
+      <div class="modal-contenido">
+        <div class="modal-encabezado">
+          <div>
+            <span class="etiqueta">PDF institucional</span>
+            <h2>REI-2026-071.pdf</h2>
+          </div>
+          <a class="cerrar-modal" href="reportes.html#exportar-reporte">X</a>
+        </div>
+        <p>El reporte incluye fecha 07/07/2026, responsable, puntaje, historial, observaciones y marca de confidencialidad según permisos del rol.</p>
+        <div class="lista-datos">
+          <div class="fila-dato"><span>Datos sensibles</span><span class="etiqueta-amarilla etiqueta">Parcialmente ocultos</span></div>
+          <div class="fila-dato"><span>Auditoría</span><span class="etiqueta">Registrada</span></div>
+          <div class="fila-dato"><span>Tiempo estimado</span><span>18 min ahorrados</span></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
