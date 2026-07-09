@@ -1,4 +1,4 @@
-.panel-claro,
+﻿.panel-claro,
 .bloque-datos,
 .bloque-tabla {
   background-color: white;
@@ -403,5 +403,688 @@
   .busqueda-lista-internos input {
     width: 100%;
     box-sizing: border-box;
+  }
+}
+
+/* BOTON HAMBURGUESA (ESCONDE EN DESKTOP) */
+.menu-checkbox {
+  display: none;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  line-height: 1;
+  color: #075e44;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+/* Responsive para pantallas pequeñas: pie de pagina */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-social img {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Responsive para pantallas pequeñas: Menu Hamburguesa */
+@media (max-width: 768px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .top-header {
+    height: 74px;
+    min-height: 74px;
+    padding: 0 12px;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .logo {
+    order: 1;
+    margin-left: 0;
+  }
+
+  .logo img {
+    width: 118px;
+    height: 64px;
+  }
+
+  .div-busqueda {
+    order: 2;
+    margin-left: auto;
+    margin-right: 10px;
+    gap: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    order: 3;
+    margin-right: 0;
+    padding: 8px 10px;
+    border: 1px solid #b8d9cc;
+    border-radius: 10px;
+    background-color: white;
+  }
+
+  .menu-horizontal {
+    display: none;
+    order: 4;
+    flex-direction: column;
+    width: 100%;
+    max-height: calc(100vh - 74px);
+    overflow-y: auto;
+    background-color: white;
+    position: absolute;
+    top: 74px;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid #d6e0dc;
+    border-bottom: 1px solid #b8d9cc;
+    box-shadow: 0 14px 28px rgba(23, 32, 29, 0.12);
+  }
+
+  .menu-horizontal.active,
+  .menu-checkbox:checked ~ .menu-horizontal {
+    display: flex;
+  }
+
+  .menu-horizontal li {
+    width: 100%;
+    border-bottom: 1px solid #d6e0dc;
+  }
+
+  .menu-horizontal li a,
+  .menu-horizontal li a:hover,
+  .opcion-inicio > a,
+  .opcion-activa > a {
+    width: 100%;
+    padding: 13px 18px;
+    border-radius: 0;
+  }
+
+  .menu-vertical,
+  .menu-configuracion {
+    position: static;
+    display: block;
+    width: 100%;
+    padding: 0 0 8px;
+    border: 0;
+    border-radius: 0;
+    background-color: #f4f8f6;
+  }
+
+  .menu-horizontal li:hover .menu-vertical {
+    display: block;
+  }
+
+  .menu-vertical li {
+    border-bottom: 0;
+  }
+
+  .menu-vertical li a {
+    padding: 9px 28px;
+    font-size: 12px;
+  }
+
+  .opciones-usuario {
+    right: -46px;
+  }
+
+  .historia-contenido {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .historia-imagen img {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .historia-texto {
+    font-size: 1.1rem;
+  }
+}
+
+/* Responsive para pantallas pequeñas: Formulario */
+@media (max-width: 768px) {
+  .contacto-contenido {
+    flex-direction: column;
+  }
+
+  .formulario-contacto,
+  .contacto-instrucciones {
+    width: 100%;
+  }
+
+  .mensaje-enviado {
+    text-align: center;
+  }
+}
+
+/* Responsive general para el prototipo ReintegraIA */
+@media (max-width: 768px) {
+  .section-resumen {
+    margin: 94px 14px 0;
+  }
+
+  .section-seguimiento,
+  .section-actividad,
+  .seccion-ajustada,
+  .section-titulo-seguimiento,
+  .section-contenido-seguimiento,
+  .section-evaluacion,
+  .section-configuracion {
+    margin-left: 14px;
+    margin-right: 14px;
+  }
+
+  .section-contenido-seguimiento,
+  .section-evaluacion,
+  .section-configuracion,
+  .div-gral-resumen,
+  .div-gral-seguimiento,
+  .fila-campos,
+  .grilla-dos,
+  .grilla-tres,
+  .formulario-simple {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tarjeta-resumen,
+  .div-tendencia,
+  .div-alertas,
+  .div-formulario-evaluacion,
+  .div-criterios,
+  .div-linea-tiempo,
+  .div-columna-derecha,
+  .div-menu-configuracion,
+  .div-usuarios-roles,
+  .campo {
+    width: 100%;
+  }
+
+  .tarjeta-resumen {
+    min-height: 96px;
+  }
+
+  .imagen-tarjeta {
+    width: 58px;
+    height: 58px;
+  }
+
+  .div-tendencia,
+  .div-alertas,
+  .div-gral-actividad,
+  .panel-claro,
+  .bloque-datos,
+  .bloque-tabla,
+  .div-formulario-evaluacion,
+  .div-criterios,
+  .div-linea-tiempo,
+  .div-menu-configuracion,
+  .div-usuarios-roles {
+    padding: 18px;
+  }
+
+  .div-grafico {
+    height: 130px;
+    padding: 0 18px;
+    gap: 10px;
+    overflow-x: auto;
+  }
+
+  .barra {
+    min-width: 26px;
+  }
+
+  .tabla-actividad,
+  .usuarios-activos table,
+  .calendario table {
+    min-width: 640px;
+  }
+
+  .div-gral-actividad,
+  .usuarios-activos,
+  .calendario,
+  .panel-claro,
+  .bloque-tabla {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  .calendario table {
+    min-width: 360px;
+  }
+
+  .tabla-actividad th,
+  .tabla-actividad td,
+  .usuarios-activos td {
+    padding: 10px 12px;
+    white-space: nowrap;
+  }
+
+  .fila-dato,
+  .encabezado-lista-internos,
+  .busqueda-lista-internos,
+  .acciones-lista-internos,
+  .fila-botones {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .fila-dato {
+    gap: 6px;
+  }
+
+  .busqueda-lista-internos input,
+  .campo-simple input,
+  .campo-simple select,
+  .campo-simple textarea,
+  .campo input,
+  .div-formulario-evaluacion textarea {
+    width: 100%;
+  }
+
+  .boton-accion,
+  .boton-secundario,
+  .boton-alerta {
+    width: 100%;
+    text-align: center;
+  }
+
+  .sesion {
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .sesion strong {
+    width: 44px;
+    flex: 0 0 44px;
+  }
+
+  .sesion p {
+    padding: 13px;
+  }
+
+  .imagen-atajos {
+    position: static;
+    display: block;
+    width: 82px;
+    height: 64px;
+    margin: -6px auto 6px;
+  }
+
+  .modal-css {
+    padding: 16px;
+  }
+
+  .modal-contenido {
+    max-height: calc(100vh - 32px);
+    overflow-y: auto;
+    padding: 18px;
+  }
+
+  .panel-acceso {
+    max-width: none;
+  }
+
+  .panel-acceso img {
+    width: 150px;
+    height: 78px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    width: 104px;
+  }
+
+  .menu-usuario summary {
+    padding: 9px 12px;
+    font-size: 12px;
+  }
+
+  .menu-toggle {
+    font-size: 1.7rem;
+    padding: 7px 9px;
+  }
+
+  .texto-tarjeta h2 {
+    font-size: 24px;
+  }
+
+  .panel-claro h2,
+  .bloque-datos h2,
+  .bloque-tabla h2,
+  .div-tendencia h2,
+  .div-alertas h2,
+  .div-gral-actividad h2 {
+    font-size: 16px;
+  }
+
+  .tabla-actividad,
+  .usuarios-activos table {
+    font-size: 11px;
+  }
+}
+
+
+/* Login institucional */
+.login-screen {
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f4f8f6;
+}
+
+.login-layout {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: minmax(360px, 0.85fr) minmax(420px, 1.15fr);
+}
+
+.login-brand-panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 56px 62px;
+  overflow: hidden;
+  color: white;
+  background: linear-gradient(160deg, #0d764f 0%, #075e44 100%);
+}
+
+.login-brand-logo {
+  width: 176px;
+  height: auto;
+  margin-bottom: 18px;
+  padding: 8px 12px;
+  background-color: rgba(255, 255, 255, 0.92);
+  border-radius: 12px;
+}
+
+.login-brand-panel h1 {
+  margin: 0 0 12px;
+  font-size: 36px;
+  line-height: 1.1;
+  color: white;
+}
+
+.login-brand-panel p {
+  max-width: 360px;
+  margin: 0 0 34px;
+  color: #e5f5ee;
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+.login-brand-highlights {
+  display: grid;
+  max-width: 330px;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.login-brand-highlights span {
+  display: block;
+  padding: 14px 18px;
+  color: #075e44;
+  background-color: #e9f8f1;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.login-persona {
+  width: min(240px, 62%);
+  max-width: 260px;
+  margin-top: 10px;
+  align-self: flex-start;
+  object-fit: contain;
+}
+
+.login-form-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 48px 28px;
+}
+
+.login-card {
+  width: min(420px, 100%);
+  padding: 36px 34px;
+  background-color: white;
+  border: 1px solid #d6e0dc;
+  border-radius: 14px;
+  box-shadow: 0 18px 45px rgba(23, 32, 29, 0.08);
+}
+
+.login-card-logo {
+  display: block;
+  width: 132px;
+  height: auto;
+  margin-bottom: 14px;
+}
+
+.login-card h2 {
+  margin: 0 0 7px;
+  color: #17201d;
+  font-size: 26px;
+}
+
+.login-card p {
+  margin: 0 0 24px;
+  color: #7b8984;
+  font-size: 13px;
+}
+
+.login-form {
+  display: grid;
+  gap: 15px;
+}
+
+.login-form .campo-simple label {
+  color: #35413d;
+}
+
+.login-form .campo-simple input,
+.login-form .campo-simple select {
+  min-height: 43px;
+  background-color: #fbfdfc;
+}
+
+.login-forgot {
+  display: block;
+  margin: 18px 0 24px;
+  color: #075e44;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: right;
+  text-decoration: none;
+}
+
+.login-submit {
+  display: block;
+  width: 100%;
+  padding: 14px 18px;
+  color: white;
+  background-color: #0d764f;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+}
+
+.login-submit:hover {
+  background-color: #075e44;
+}
+
+.modal-contenido-amplio {
+  width: min(760px, 100%);
+}
+
+.modal-formulario .formulario-simple {
+  margin-top: 8px;
+}
+
+.seccion-perfil-interno,
+.seccion-estado-tratamiento {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.seccion-perfil-interno .panel-claro,
+.seccion-estado-tratamiento .panel-claro {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .login-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .login-brand-panel,
+  .login-form-panel {
+    min-height: auto;
+  }
+
+  .login-brand-panel {
+    padding: 34px 22px 28px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .login-brand-logo {
+    width: 150px;
+    margin-bottom: 14px;
+  }
+
+  .login-brand-panel h1 {
+    font-size: 30px;
+  }
+
+  .login-brand-panel p {
+    max-width: 310px;
+    margin-bottom: 22px;
+    font-size: 16px;
+  }
+
+  .login-brand-highlights {
+    width: 100%;
+    max-width: 360px;
+    gap: 10px;
+  }
+
+  .login-brand-highlights span {
+    padding: 12px 14px;
+  }
+
+  .login-persona {
+    width: 150px;
+    margin: 16px auto 0;
+    align-self: center;
+  }
+
+  .login-form-panel {
+    padding: 24px 16px 34px;
+  }
+
+  .login-card {
+    padding: 28px 22px;
+    border-radius: 12px;
+  }
+
+  .login-card-logo {
+    width: 118px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .login-card h2,
+  .login-card p {
+    text-align: center;
+  }
+
+  .login-forgot {
+    text-align: center;
+  }
+
+  .modal-contenido-amplio {
+    width: 100%;
+  }
+}
+
+.seccion-observaciones {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+/* Ajuste de lectura para perfil y tratamiento */
+.seccion-perfil-interno,
+.seccion-estado-tratamiento {
+  display: block;
+  margin: 30px;
+}
+
+.seccion-perfil-interno .panel-claro,
+.seccion-estado-tratamiento .panel-claro {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.seccion-perfil-interno .lista-datos,
+.seccion-estado-tratamiento .lista-datos,
+.seccion-perfil-interno .barra-progreso,
+.seccion-estado-tratamiento .barra-progreso {
+  width: 100%;
+  max-width: none;
+}
+
+.seccion-perfil-interno .fila-dato,
+.seccion-estado-tratamiento .fila-dato {
+  display: grid;
+  grid-template-columns: minmax(180px, 260px) minmax(0, 1fr);
+  align-items: center;
+  column-gap: 32px;
+}
+
+.seccion-perfil-interno .fila-dato > :last-child,
+.seccion-estado-tratamiento .fila-dato > :last-child {
+  justify-self: start;
+  text-align: left;
+}
+
+.seccion-perfil-interno .fila-botones,
+.seccion-estado-tratamiento .fila-botones {
+  margin-top: 16px;
+}
+
+@media (max-width: 768px) {
+  .seccion-perfil-interno,
+  .seccion-estado-tratamiento {
+    margin: 12px;
+  }
+
+  .seccion-perfil-interno .fila-dato,
+  .seccion-estado-tratamiento .fila-dato {
+    grid-template-columns: 1fr;
+    gap: 6px;
   }
 }

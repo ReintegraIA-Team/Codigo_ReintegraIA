@@ -1,4 +1,4 @@
-body {
+﻿body {
   margin: 0;
   background-color: #f4f8f6;
   color: #17201d;
@@ -177,3 +177,6 @@ body {
 }
 
 .imagen-atajos { position: absolute; top: -24px; right: -5px; width: 100px; height: 80px; object-fit: contain; }
+
+
+
