@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -10,17 +10,22 @@
 
   <body>
     <nav class="top-header">
-      <a href="index.html" class="logo">
+      <a href="dashboard.html" class="logo">
         <img src="assets/images/logo_reintegraia-sinFondo.png" alt="Logo de ReintegraIA" />
       </a>
 
+      <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
+      <label for="menu-toggle" class="menu-toggle" aria-label="Abrir menú" role="button">
+        &#9776;
+      </label>
+
       <ul class="menu-horizontal">
         <li>
-          <a href="index.html">Inicio</a>
+          <a href="dashboard.html">Inicio</a>
           <ul class="menu-vertical">
-            <li><a href="index.html">Panel principal</a></li>
+            <li><a href="dashboard.html">Panel principal</a></li>
             <li><a href="seguimiento.html#calendario-sesiones">Calendario de sesiones</a></li>
-            <li><a href="index.html#alertas-recientes">Alertas recientes</a></li>
+            <li><a href="dashboard.html#alertas-recientes">Alertas recientes</a></li>
           </ul>
         </li>
         <li>
@@ -46,7 +51,6 @@
           <ul class="menu-vertical">
             <li><a href="seguimiento.html#sesiones-programadas">Sesiones programadas</a></li>
             <li><a href="seguimiento.html#registrar-avance">Registrar avance</a></li>
-            <li><a href="seguimiento.html#observaciones">Observaciones</a></li>
             <li><a href="seguimiento.html#estado-tratamiento">Estado del tratamiento</a></li>
           </ul>
         </li>
@@ -65,7 +69,7 @@
             <li><a href="configuracion.html#mi-perfil">Mi perfil</a></li>
             <li><a href="configuracion.html#especialistas">Especialistas</a></li>
             <li><a href="configuracion.html#roles-permisos">Roles y permisos</a></li>
-            <li><a href="login.html#cerrar-sesion">Cerrar sesión</a></li>
+            <li><a href="index.html#cerrar-sesion">Cerrar sesión</a></li>
           </ul>
         </li>
       </ul>
@@ -118,7 +122,7 @@
       </div>
     </section>
 
-    <section class="seccion-ajustada grilla-dos">
+    <section class="seccion-ajustada seccion-reporte-individual">
       <div id="reporte-individual" class="panel-claro">
         <h2>Reporte individual</h2>
         <div class="formulario-simple">
@@ -142,21 +146,6 @@
         <div class="fila-botones">
           <a class="boton-accion" href="reportes.html#vista-reporte">Generar vista previa</a>
           <a class="boton-secundario" href="internos.html#evidencias-interno">Completar evidencia</a>
-        </div>
-      </div>
-
-      <div id="vista-reporte" class="panel-claro">
-        <h2>Vista previa</h2>
-        <div class="lista-datos">
-          <div class="fila-dato"><span>ID</span><strong>REI-2026-071</strong></div>
-          <div class="fila-dato"><span>Puntaje de reinserción</span><span class="etiqueta-amarilla etiqueta">62%</span></div>
-          <div class="fila-dato"><span>Incidentes del trimestre</span><span>2 eventos</span></div>
-          <div class="fila-dato"><span>Observaciones incluidas</span><span>12 registros</span></div>
-          <div class="fila-dato"><span>Advertencias</span><span class="etiqueta-amarilla etiqueta">2 pendientes</span></div>
-        </div>
-        <div id="exportar-reporte" class="fila-botones">
-          <a class="boton-accion" href="reportes.html#pdf-generado">Exportar PDF</a>
-          <a class="boton-secundario" href="configuracion.html#auditoria">Ver permisos</a>
         </div>
       </div>
     </section>
@@ -206,6 +195,46 @@
       </div>
     </section>
 
+
+    <div id="vista-reporte" class="modal-css modal-formulario">
+      <div class="modal-contenido modal-contenido-amplio">
+        <div class="modal-encabezado">
+          <div>
+            <span class="etiqueta">Vista previa</span>
+            <h2>Reporte individual REI-2026-071</h2>
+          </div>
+          <a class="cerrar-modal" href="reportes.html#reporte-individual">X</a>
+        </div>
+        <div class="lista-datos">
+          <div class="fila-dato"><span>ID</span><strong>REI-2026-071</strong></div>
+          <div class="fila-dato"><span>Puntaje de reinserción</span><span class="etiqueta-amarilla etiqueta">62%</span></div>
+          <div class="fila-dato"><span>Incidentes del trimestre</span><span>2 eventos</span></div>
+          <div class="fila-dato"><span>Observaciones incluidas</span><span>12 registros</span></div>
+          <div class="fila-dato"><span>Advertencias</span><span class="etiqueta-amarilla etiqueta">2 pendientes</span></div>
+        </div>
+        <div class="fila-botones">
+          <a class="boton-accion" href="reportes.html#exportar-reporte">Exportar reporte</a>
+          <a class="boton-secundario" href="internos.html#evidencias-interno">Completar evidencia</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="exportar-reporte" class="modal-css modal-formulario">
+      <div class="modal-contenido">
+        <div class="modal-encabezado">
+          <div>
+            <span class="etiqueta">Exportación</span>
+            <h2>Preparar reporte institucional</h2>
+          </div>
+          <a class="cerrar-modal" href="reportes.html#reporte-individual">X</a>
+        </div>
+        <p>Exportación lista para el expediente INT-02481 con 12 observaciones, 2 advertencias y datos sensibles protegidos por rol.</p>
+        <div class="fila-botones">
+          <a class="boton-accion" href="reportes.html#pdf-generado">Exportar PDF</a>
+          <a class="boton-secundario" href="configuracion.html#auditoria">Ver permisos</a>
+        </div>
+      </div>
+    </div>
     <div id="pdf-generado" class="modal-css">
       <div class="modal-contenido">
         <div class="modal-encabezado">
@@ -213,7 +242,7 @@
             <span class="etiqueta">PDF institucional</span>
             <h2>REI-2026-071.pdf</h2>
           </div>
-          <a class="cerrar-modal" href="reportes.html#exportar-reporte">X</a>
+          <a class="cerrar-modal" href="reportes.html#reporte-individual">X</a>
         </div>
         <p>El reporte incluye fecha 07/07/2026, responsable, puntaje, historial, observaciones y marca de confidencialidad según permisos del rol.</p>
         <div class="lista-datos">
@@ -225,3 +254,10 @@
     </div>
   </body>
 </html>
+
+
+
+
+
+
+

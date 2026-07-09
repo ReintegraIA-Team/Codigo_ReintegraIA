@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -10,17 +10,22 @@
 
   <body>
     <nav class="top-header">
-      <a href="index.html" class="logo">
+      <a href="dashboard.html" class="logo">
         <img src="assets/images/logo_reintegraia-sinFondo.png" alt="Logo de ReintegraIA" />
       </a>
 
+      <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
+      <label for="menu-toggle" class="menu-toggle" aria-label="Abrir menú" role="button">
+        &#9776;
+      </label>
+
       <ul class="menu-horizontal">
         <li>
-          <a href="index.html">Inicio</a>
+          <a href="dashboard.html">Inicio</a>
           <ul class="menu-vertical">
-            <li><a href="index.html">Panel principal</a></li>
+            <li><a href="dashboard.html">Panel principal</a></li>
             <li><a href="seguimiento.html#calendario-sesiones">Calendario de sesiones</a></li>
-            <li><a href="index.html#alertas-recientes">Alertas recientes</a></li>
+            <li><a href="dashboard.html#alertas-recientes">Alertas recientes</a></li>
           </ul>
         </li>
         <li>
@@ -46,7 +51,6 @@
           <ul class="menu-vertical">
             <li><a href="seguimiento.html#sesiones-programadas">Sesiones programadas</a></li>
             <li><a href="seguimiento.html#registrar-avance">Registrar avance</a></li>
-            <li><a href="seguimiento.html#observaciones">Observaciones</a></li>
             <li><a href="seguimiento.html#estado-tratamiento">Estado del tratamiento</a></li>
           </ul>
         </li>
@@ -65,7 +69,7 @@
             <li><a href="configuracion.html#mi-perfil">Mi perfil</a></li>
             <li><a href="configuracion.html#especialistas">Especialistas</a></li>
             <li><a href="configuracion.html#roles-permisos">Roles y permisos</a></li>
-            <li><a href="login.html#cerrar-sesion">Cerrar sesión</a></li>
+            <li><a href="index.html#cerrar-sesion">Cerrar sesión</a></li>
           </ul>
         </li>
       </ul>
@@ -165,3 +169,9 @@
     </section>
   </body>
 </html>
+
+
+
+
+
+

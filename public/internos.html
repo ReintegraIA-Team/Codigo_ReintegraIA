@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -10,17 +10,22 @@
 
   <body>
     <nav class="top-header">
-      <a href="index.html" class="logo">
+      <a href="dashboard.html" class="logo">
         <img src="assets/images/logo_reintegraia-sinFondo.png" alt="Logo de ReintegraIA" />
       </a>
 
+      <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
+      <label for="menu-toggle" class="menu-toggle" aria-label="Abrir menú" role="button">
+        &#9776;
+      </label>
+
       <ul class="menu-horizontal">
         <li>
-          <a href="index.html">Inicio</a>
+          <a href="dashboard.html">Inicio</a>
           <ul class="menu-vertical">
-            <li><a href="index.html">Panel principal</a></li>
+            <li><a href="dashboard.html">Panel principal</a></li>
             <li><a href="seguimiento.html#calendario-sesiones">Calendario de sesiones</a></li>
-            <li><a href="index.html#alertas-recientes">Alertas recientes</a></li>
+            <li><a href="dashboard.html#alertas-recientes">Alertas recientes</a></li>
           </ul>
         </li>
 
@@ -49,7 +54,6 @@
           <ul class="menu-vertical">
             <li><a href="seguimiento.html#sesiones-programadas">Sesiones programadas</a></li>
             <li><a href="seguimiento.html#registrar-avance">Registrar avance</a></li>
-            <li><a href="seguimiento.html#observaciones">Observaciones</a></li>
             <li><a href="seguimiento.html#estado-tratamiento">Estado del tratamiento</a></li>
           </ul>
         </li>
@@ -70,7 +74,7 @@
             <li><a href="configuracion.html#mi-perfil">Mi perfil</a></li>
             <li><a href="configuracion.html#especialistas">Especialistas</a></li>
             <li><a href="configuracion.html#roles-permisos">Roles y permisos</a></li>
-            <li><a href="login.html#cerrar-sesion">Cerrar sesión</a></li>
+            <li><a href="index.html#cerrar-sesion">Cerrar sesión</a></li>
           </ul>
         </li>
       </ul>
@@ -185,37 +189,7 @@
       </div>
     </section>
 
-    <section class="seccion-ajustada grilla-dos">
-      <div id="registrar-interno" class="panel-claro">
-        <h2>Registrar interno</h2>
-        <div class="formulario-simple">
-          <div class="campo-simple">
-            <label>Código</label>
-            <input type="text" value="INT-02502" />
-          </div>
-          <div class="campo-simple">
-            <label>Nombre completo</label>
-            <input type="text" value="Ramírez Vega, Andrés" />
-          </div>
-          <div class="campo-simple">
-            <label>Pabellón</label>
-            <select><option>Pabellón B</option><option>Pabellón A</option><option>Pabellón C</option></select>
-          </div>
-          <div class="campo-simple">
-            <label>Programa inicial</label>
-            <select><option>Evaluación psicológica inicial</option><option>Programa educativo</option><option>Programa laboral</option></select>
-          </div>
-          <div class="campo-simple campo-ancho">
-            <label>Resumen inicial</label>
-            <textarea>Ingreso al seguimiento con evaluación inicial pendiente para los próximos 5 días y entrevista social solicitada.</textarea>
-          </div>
-        </div>
-        <div class="fila-botones">
-          <a class="boton-accion" href="internos.html#registro-confirmado">Guardar ficha</a>
-          <a class="boton-secundario" href="evaluacion.html#diagnostico-inicial">Abrir diagnóstico</a>
-        </div>
-      </div>
-
+    <section class="seccion-ajustada seccion-perfil-interno">
       <div id="perfil-interno" class="panel-claro">
         <h2>Perfil del interno</h2>
         <div class="lista-datos">
@@ -291,6 +265,43 @@
       </div>
     </section>
 
+    <div id="registrar-interno" class="modal-css modal-formulario">
+      <div class="modal-contenido modal-contenido-amplio">
+        <div class="modal-encabezado">
+          <div>
+            <span class="etiqueta">Nuevo registro</span>
+            <h2>Registrar interno</h2>
+          </div>
+          <a class="cerrar-modal" href="internos.html#lista-internos">X</a>
+        </div>
+        <div class="formulario-simple">
+          <div class="campo-simple">
+            <label>Código</label>
+            <input type="text" value="INT-02502" />
+          </div>
+          <div class="campo-simple">
+            <label>Nombre completo</label>
+            <input type="text" value="Ramírez Vega, Andrés" />
+          </div>
+          <div class="campo-simple">
+            <label>Pabellón</label>
+            <select><option>Pabellón B</option><option>Pabellón A</option><option>Pabellón C</option></select>
+          </div>
+          <div class="campo-simple">
+            <label>Programa inicial</label>
+            <select><option>Evaluación psicológica inicial</option><option>Programa educativo</option><option>Programa laboral</option></select>
+          </div>
+          <div class="campo-simple campo-ancho">
+            <label>Resumen inicial</label>
+            <textarea>Ingreso al seguimiento con evaluación inicial pendiente para los próximos 5 días y entrevista social solicitada.</textarea>
+          </div>
+        </div>
+        <div class="fila-botones">
+          <a class="boton-accion" href="internos.html#registro-confirmado">Guardar ficha</a>
+          <a class="boton-secundario" href="evaluacion.html#diagnostico-inicial">Abrir diagnóstico</a>
+        </div>
+      </div>
+    </div>
     <div id="registro-confirmado" class="modal-css">
       <div class="modal-contenido">
         <div class="modal-encabezado">
@@ -298,7 +309,7 @@
             <span class="etiqueta">Ficha registrada</span>
             <h2>INT-02502</h2>
           </div>
-          <a class="cerrar-modal" href="internos.html#registrar-interno">X</a>
+          <a class="cerrar-modal" href="internos.html#lista-internos">X</a>
         </div>
         <p>La ficha queda visible con evaluación inicial pendiente para los próximos 5 días.</p>
       </div>
@@ -318,3 +329,11 @@
     </div>
   </body>
 </html>
+
+
+
+
+
+
+
+

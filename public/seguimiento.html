@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -11,17 +11,22 @@
   <body>
     <!-- CABECERA Y MENU PRINCIPAL -->
     <nav class="top-header">
-      <a href="index.html" class="logo">
+      <a href="dashboard.html" class="logo">
         <img src="assets/images/logo_reintegraia-sinFondo.png" alt="Logo de ReintegraIA" />
       </a>
 
+      <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
+      <label for="menu-toggle" class="menu-toggle" aria-label="Abrir menú" role="button">
+        &#9776;
+      </label>
+
       <ul class="menu-horizontal">
         <li>
-          <a href="index.html">Inicio</a>
+          <a href="dashboard.html">Inicio</a>
           <ul class="menu-vertical">
-            <li><a href="index.html">Panel principal</a></li>
+            <li><a href="dashboard.html">Panel principal</a></li>
             <li><a href="seguimiento.html#calendario-sesiones">Calendario de sesiones</a></li>
-            <li><a href="index.html#alertas-recientes">Alertas recientes</a></li>
+            <li><a href="dashboard.html#alertas-recientes">Alertas recientes</a></li>
           </ul>
         </li>
 
@@ -50,7 +55,6 @@
           <ul class="menu-vertical">
             <li><a href="seguimiento.html#sesiones-programadas">Sesiones programadas</a></li>
             <li><a href="seguimiento.html#registrar-avance">Registrar avance</a></li>
-            <li><a href="seguimiento.html#observaciones">Observaciones</a></li>
             <li><a href="seguimiento.html#estado-tratamiento">Estado del tratamiento</a></li>
           </ul>
         </li>
@@ -71,7 +75,7 @@
             <li><a href="configuracion.html#mi-perfil">Mi perfil</a></li>
             <li><a href="configuracion.html#especialistas">Especialistas</a></li>
             <li><a href="configuracion.html#roles-permisos">Roles y permisos</a></li>
-            <li><a href="login.html#cerrar-sesion">Cerrar sesión</a></li>
+            <li><a href="index.html#cerrar-sesion">Cerrar sesión</a></li>
           </ul>
         </li>
       </ul>
@@ -162,9 +166,27 @@
       </div>
     </section>
 
-    <section class="seccion-ajustada grilla-dos">
-      <div id="registrar-avance" class="panel-claro">
-        <h2>Registrar avance</h2>
+    <section class="seccion-ajustada seccion-estado-tratamiento">
+      <div id="estado-tratamiento" class="panel-claro">
+        <h2>Estado del tratamiento</h2>
+        <div class="lista-datos">
+          <div class="fila-dato"><span>Plan activo</span><span class="etiqueta">18 meses</span></div>
+          <div class="fila-dato"><span>Avance general</span><strong>64%</strong></div>
+          <div class="barra-progreso"><span style="width: 64%"></span></div>
+          <div class="fila-dato"><span>Riesgo actual</span><span class="etiqueta-amarilla etiqueta">Medio</span></div>
+          <div class="fila-dato"><span>Próxima meta</span><span>Reducir incidentes a 0 en 30 días</span></div>
+        </div>
+      </div>
+    </section>
+<div id="registrar-avance" class="modal-css modal-formulario">
+      <div class="modal-contenido modal-contenido-amplio">
+        <div class="modal-encabezado">
+          <div>
+            <span class="etiqueta">Seguimiento</span>
+            <h2>Registrar avance</h2>
+          </div>
+          <a class="cerrar-modal" href="seguimiento.html#estado-tratamiento">X</a>
+        </div>
         <div class="formulario-simple">
           <div class="campo-simple">
             <label>Interno</label>
@@ -192,32 +214,17 @@
           <a class="boton-secundario" href="reportes.html#reporte-individual">Enviar a reporte</a>
         </div>
       </div>
+    </div>
 
-      <div id="estado-tratamiento" class="panel-claro">
-        <h2>Estado del tratamiento</h2>
-        <div class="lista-datos">
-          <div class="fila-dato"><span>Plan activo</span><span class="etiqueta">18 meses</span></div>
-          <div class="fila-dato"><span>Avance general</span><strong>64%</strong></div>
-          <div class="barra-progreso"><span style="width: 64%"></span></div>
-          <div class="fila-dato"><span>Riesgo actual</span><span class="etiqueta-amarilla etiqueta">Medio</span></div>
-          <div class="fila-dato"><span>Próxima meta</span><span>Reducir incidentes a 0 en 30 días</span></div>
+    <div id="programar-entrevista" class="modal-css modal-formulario">
+      <div class="modal-contenido">
+        <div class="modal-encabezado">
+          <div>
+            <span class="etiqueta">Agenda</span>
+            <h2>Programar entrevista</h2>
+          </div>
+          <a class="cerrar-modal" href="seguimiento.html#sesiones-programadas">X</a>
         </div>
-      </div>
-    </section>
-
-    <section class="seccion-ajustada grilla-tres">
-      <div id="observaciones" class="panel-claro">
-        <h2>Observaciones</h2>
-        <div class="lista-datos">
-          <div class="fila-dato"><span>Psicología</span><span class="etiqueta">Nueva</span></div>
-          <p class="texto-muted">Se observa mejor adherencia al plan, aunque persiste ansiedad en entrevistas grupales.</p>
-          <div class="fila-dato"><span>Trabajo social</span><span class="etiqueta-amarilla etiqueta">Pendiente</span></div>
-          <p class="texto-muted">La llamada familiar está programada para el 14/07/2026.</p>
-        </div>
-      </div>
-
-      <div id="programar-entrevista" class="panel-claro">
-        <h2>Programar entrevista</h2>
         <div class="lista-datos">
           <div class="fila-dato"><span>Fecha sugerida</span><strong>09/07/2026</strong></div>
           <div class="fila-dato"><span>Duración</span><span>45 min</span></div>
@@ -227,9 +234,17 @@
           <a class="boton-accion" href="seguimiento.html#entrevista-programada">Confirmar</a>
         </div>
       </div>
+    </div>
 
-      <div id="validar-avance" class="panel-claro">
-        <h2>Validar avance</h2>
+    <div id="validar-avance" class="modal-css modal-formulario">
+      <div class="modal-contenido">
+        <div class="modal-encabezado">
+          <div>
+            <span class="etiqueta">Control de avance</span>
+            <h2>Validar avance</h2>
+          </div>
+          <a class="cerrar-modal" href="seguimiento.html#estado-tratamiento">X</a>
+        </div>
         <div class="lista-datos">
           <div class="fila-dato"><span>Registros revisados</span><span class="etiqueta">12</span></div>
           <div class="fila-dato"><span>Consistencia</span><span class="etiqueta">88%</span></div>
@@ -239,8 +254,7 @@
           <a class="boton-accion" href="seguimiento.html#avance-validado">Marcar como validado</a>
         </div>
       </div>
-    </section>
-
+    </div>
     <div id="entrevista-programada" class="modal-css">
       <div class="modal-contenido">
         <div class="modal-encabezado">
@@ -248,7 +262,7 @@
             <span class="etiqueta">Entrevista programada</span>
             <h2>09/07/2026 - 10:30</h2>
           </div>
-          <a class="cerrar-modal" href="seguimiento.html#programar-entrevista">X</a>
+          <a class="cerrar-modal" href="seguimiento.html#sesiones-programadas">X</a>
         </div>
         <p>La entrevista queda visible en el calendario con una duración de 45 minutos y prioridad media.</p>
       </div>
@@ -261,10 +275,18 @@
             <span class="etiqueta">Avance validado</span>
             <h2>Registro de julio</h2>
           </div>
-          <a class="cerrar-modal" href="seguimiento.html#validar-avance">X</a>
+          <a class="cerrar-modal" href="seguimiento.html#estado-tratamiento">X</a>
         </div>
         <p>El avance general queda en 64%, con recomendación de nueva revisión en 15 días.</p>
       </div>
     </div>
   </body>
 </html>
+
+
+
+
+
+
+
+
