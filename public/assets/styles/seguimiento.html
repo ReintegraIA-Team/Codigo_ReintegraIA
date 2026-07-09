@@ -1,0 +1,292 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seguimiento - ReintegraIA</title>
+    <link rel="stylesheet" href="assets/styles/he_cab_seguimiento.css" />
+    <link rel="stylesheet" href="assets/styles/he_cab_mejoras.css" />
+  </head>
+
+  <body>
+    <!-- CABECERA Y MENU PRINCIPAL -->
+    <nav class="top-header">
+      <a href="dashboard.html" class="logo">
+        <img src="assets/images/logo_reintegraia-sinFondo.png" alt="Logo de ReintegraIA" />
+      </a>
+
+      <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
+      <label for="menu-toggle" class="menu-toggle" aria-label="Abrir menú" role="button">
+        &#9776;
+      </label>
+
+      <ul class="menu-horizontal">
+        <li>
+          <a href="dashboard.html">Inicio</a>
+          <ul class="menu-vertical">
+            <li><a href="dashboard.html">Panel principal</a></li>
+            <li><a href="seguimiento.html#calendario-sesiones">Calendario de sesiones</a></li>
+            <li><a href="dashboard.html#alertas-recientes">Alertas recientes</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="internos.html">Internos</a>
+          <ul class="menu-vertical">
+            <li><a href="internos.html#lista-internos">Lista de internos</a></li>
+            <li><a href="internos.html#registrar-interno">Registrar interno</a></li>
+            <li><a href="internos.html#perfil-interno">Perfil del interno</a></li>
+            <li><a href="internos.html#historial-interno">Historial del interno</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="evaluacion.html">Evaluación</a>
+          <ul class="menu-vertical">
+            <li><a href="evaluacion.html#evaluacion-psicologica">Evaluación psicológica</a></li>
+            <li><a href="evaluacion.html#evaluacion-social">Evaluación social</a></li>
+            <li><a href="evaluacion.html#diagnostico-inicial">Diagnóstico inicial</a></li>
+            <li><a href="evaluacion.html#plan-intervencion">Plan de intervención</a></li>
+          </ul>
+        </li>
+
+        <li class="opcion-activa">
+          <a href="seguimiento.html#sesiones-programadas">Seguimiento</a>
+          <ul class="menu-vertical">
+            <li><a href="seguimiento.html#sesiones-programadas">Sesiones programadas</a></li>
+            <li><a href="seguimiento.html#registrar-avance">Registrar avance</a></li>
+            <li><a href="seguimiento.html#estado-tratamiento">Estado del tratamiento</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="reportes.html">Reportes</a>
+          <ul class="menu-vertical">
+            <li><a href="reportes.html#reporte-individual">Reporte individual</a></li>
+            <li><a href="reportes.html#reporte-especialista">Reporte por especialista</a></li>
+            <li><a href="reportes.html#reporte-mensual">Reporte mensual</a></li>
+            <li><a href="reportes.html#exportar-reporte">Exportar reporte</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="configuracion.html">Configuración</a>
+          <ul class="menu-vertical menu-configuracion">
+            <li><a href="configuracion.html#mi-perfil">Mi perfil</a></li>
+            <li><a href="configuracion.html#especialistas">Especialistas</a></li>
+            <li><a href="configuracion.html#roles-permisos">Roles y permisos</a></li>
+            <li><a href="index.html#cerrar-sesion">Cerrar sesión</a></li>
+          </ul>
+        </li>
+      </ul>
+
+            <div class="div-busqueda">
+        <details class="menu-usuario">
+          <summary>Psi.</summary>
+          <div class="opciones-usuario">
+            <button type="button">Ver perfil</button>
+            <button type="button">Cerrar sesión</button>
+          </div>
+        </details>
+      </div>
+    </nav>
+
+    <!-- TITULO DE LA PAGINA -->
+    <section class="section-titulo-seguimiento">
+      <h2>Seguimiento de pacientes internos</h2>
+      <p>Control de sesiones, metas y alertas por especialista. Corte: julio de 2026.</p>
+    </section>
+
+    <!-- CONTENIDO DE SEGUIMIENTO -->
+    <section class="section-contenido-seguimiento">
+      <div id="sesiones-programadas" class="div-linea-tiempo">
+        <h2>Línea de tiempo</h2>
+
+        <div class="sesion">
+          <strong>13:00</strong>
+          <span class="circulo circulo-verde"></span>
+          <p>Sesión psicológica con interno Acuña Torres, Luis Miguel. Riesgo medio, evaluación vencida hace 12 días.</p>
+        </div>
+
+        <div class="sesion">
+          <strong>14:00</strong>
+          <span class="circulo"></span>
+          <p>Revisión de documentos de INT-02481: constancia educativa vencida hace 23 días.</p>
+        </div>
+
+        <div class="sesion">
+          <strong>14:30</strong>
+          <span class="circulo"></span>
+          <p>Validación de meta educativa: asistencia 62% en junio y meta 75% para agosto.</p>
+        </div>
+
+        <div class="sesion">
+          <strong>16:00</strong>
+          <span class="circulo"></span>
+          <p>Segunda sesión psicológica con el interno Benítez Rojas, Carlos Alberto. Riesgo bajo, avance 81%.</p>
+        </div>
+      </div>
+
+      <div class="div-columna-derecha">
+        <div id="calendario-sesiones" class="div-calendario">
+          <h2>Calendario</h2>
+
+          <div class="calendario">
+            <div class="mes-calendario">
+              <button type="button">&lt;</button>
+              <strong>Julio 2026</strong>
+              <button type="button">&gt;</button>
+            </div>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Lun</th><th>Mar</th><th>Mié</th><th>Jue</th>
+                  <th>Vie</th><th>Sáb</th><th>Dom</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="otro-mes">29</td><td class="otro-mes">30</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+                <tr><td>6</td><td class="dia-seleccionado">7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td></tr>
+                <tr><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td></tr>
+                <tr><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td></tr>
+                <tr><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td class="otro-mes">1</td><td class="otro-mes">2</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="div-atajos">
+          <h2>Atajos</h2>
+          <img src="assets/images/calendario.png" alt="Icono de calendario" class="imagen-atajos" />
+          <a href="internos.html#perfil-interno">Actualizar ficha</a>
+          <a href="seguimiento.html#programar-entrevista">Programar entrevista</a>
+          <a href="seguimiento.html#validar-avance">Validar avance</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion-ajustada seccion-estado-tratamiento">
+      <div id="estado-tratamiento" class="panel-claro">
+        <h2>Estado del tratamiento</h2>
+        <div class="lista-datos">
+          <div class="fila-dato"><span>Plan activo</span><span class="etiqueta">18 meses</span></div>
+          <div class="fila-dato"><span>Avance general</span><strong>64%</strong></div>
+          <div class="barra-progreso"><span style="width: 64%"></span></div>
+          <div class="fila-dato"><span>Riesgo actual</span><span class="etiqueta-amarilla etiqueta">Medio</span></div>
+          <div class="fila-dato"><span>Próxima meta</span><span>Reducir incidentes a 0 en 30 días</span></div>
+        </div>
+      </div>
+    </section>
+<div id="registrar-avance" class="modal-css modal-formulario">
+      <div class="modal-contenido modal-contenido-amplio">
+        <div class="modal-encabezado">
+          <div>
+            <span class="etiqueta">Seguimiento</span>
+            <h2>Registrar avance</h2>
+          </div>
+          <a class="cerrar-modal" href="seguimiento.html#estado-tratamiento">X</a>
+        </div>
+        <div class="formulario-simple">
+          <div class="campo-simple">
+            <label>Interno</label>
+            <input type="text" value="Acuña Torres, Luis Miguel" />
+          </div>
+          <div class="campo-simple">
+            <label>Meta</label>
+            <input type="text" value="Asistencia educativa 75%" />
+          </div>
+          <div class="campo-simple">
+            <label>Avance actual</label>
+            <input type="text" value="62%" />
+          </div>
+          <div class="campo-simple">
+            <label>Próxima revisión</label>
+            <input type="text" value="22/07/2026" />
+          </div>
+          <div class="campo-simple campo-ancho">
+            <label>Nota de seguimiento</label>
+            <textarea>El interno asistió a 4 de 5 sesiones del mes. Se recomienda mantener refuerzo educativo por 2 meses.</textarea>
+          </div>
+        </div>
+        <div class="fila-botones">
+          <a class="boton-accion" href="seguimiento.html#validar-avance">Validar avance</a>
+          <a class="boton-secundario" href="reportes.html#reporte-individual">Enviar a reporte</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="programar-entrevista" class="modal-css modal-formulario">
+      <div class="modal-contenido">
+        <div class="modal-encabezado">
+          <div>
+            <span class="etiqueta">Agenda</span>
+            <h2>Programar entrevista</h2>
+          </div>
+          <a class="cerrar-modal" href="seguimiento.html#sesiones-programadas">X</a>
+        </div>
+        <div class="lista-datos">
+          <div class="fila-dato"><span>Fecha sugerida</span><strong>09/07/2026</strong></div>
+          <div class="fila-dato"><span>Duración</span><span>45 min</span></div>
+          <div class="fila-dato"><span>Especialista</span><span>Ps. Karina Salcedo</span></div>
+        </div>
+        <div class="fila-botones">
+          <a class="boton-accion" href="seguimiento.html#entrevista-programada">Confirmar</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="validar-avance" class="modal-css modal-formulario">
+      <div class="modal-contenido">
+        <div class="modal-encabezado">
+          <div>
+            <span class="etiqueta">Control de avance</span>
+            <h2>Validar avance</h2>
+          </div>
+          <a class="cerrar-modal" href="seguimiento.html#estado-tratamiento">X</a>
+        </div>
+        <div class="lista-datos">
+          <div class="fila-dato"><span>Registros revisados</span><span class="etiqueta">12</span></div>
+          <div class="fila-dato"><span>Consistencia</span><span class="etiqueta">88%</span></div>
+          <div class="fila-dato"><span>Datos incompletos</span><span class="etiqueta-amarilla etiqueta">2</span></div>
+        </div>
+        <div class="fila-botones">
+          <a class="boton-accion" href="seguimiento.html#avance-validado">Marcar como validado</a>
+        </div>
+      </div>
+    </div>
+    <div id="entrevista-programada" class="modal-css">
+      <div class="modal-contenido">
+        <div class="modal-encabezado">
+          <div>
+            <span class="etiqueta">Entrevista programada</span>
+            <h2>09/07/2026 - 10:30</h2>
+          </div>
+          <a class="cerrar-modal" href="seguimiento.html#sesiones-programadas">X</a>
+        </div>
+        <p>La entrevista queda visible en el calendario con una duración de 45 minutos y prioridad media.</p>
+      </div>
+    </div>
+
+    <div id="avance-validado" class="modal-css">
+      <div class="modal-contenido">
+        <div class="modal-encabezado">
+          <div>
+            <span class="etiqueta">Avance validado</span>
+            <h2>Registro de julio</h2>
+          </div>
+          <a class="cerrar-modal" href="seguimiento.html#estado-tratamiento">X</a>
+        </div>
+        <p>El avance general queda en 64%, con recomendación de nueva revisión en 15 días.</p>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
