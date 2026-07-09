@@ -15,7 +15,6 @@ https://reintegraia-team.github.io/Codigo_ReintegraIA/
 - Equipo ReintegraIA
 - Vasquez Olivares, Joaquin Orlando - u202422993
 - Chipana Aguirre, Aarón Sebastián - u20241G397
-- Dominguez Ocaña, Renzo Luis - u20171c700
 
 ## Segmentos objetivo
 
@@ -44,17 +43,25 @@ https://reintegraia-team.github.io/Codigo_ReintegraIA/
 ```text
 public/
   index.html
+  dashboard.html
+  login.html
+  internos.html
   evaluacion.html
   seguimiento.html
+  reportes.html
   configuracion.html
   favicon.ico
   assets/
     images/
+      logo_reintegraia-sinFondo.png
+      imagen_login.png
+      ...
     scripts/
       main.js
     styles/
       styles.css
       he_cab_menu.css
+      he_cab_mejoras.css
       he_cab_evaluacion.css
       he_cab_seguimiento.css
       he_cab_configuracion.css
